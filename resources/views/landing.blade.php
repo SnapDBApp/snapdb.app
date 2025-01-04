@@ -36,11 +36,11 @@
     </x-container>
 
     <x-container>
-        <div class="text-gray-800 grid grid-cols-1 md:grid-cols-2 gap-6 bg-gradient-to-tr from-snapdblight to-snapdb pt-10 pl-2 md:pl-10 border-2 rounded-lg border-snapdb">
+        <x-landing.feature-card class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-10 pl-2 md:pl-10">
             <div class="px-8 lg:px-0">
                 <h2 class="font-biggo text-2xl mb-4 flex items-center gap-2">
                     <x-tabler-bolt-filled class="size-6 inline" />
-                    {{ __('Spin up databases lightning fast') }}
+                    {{ __('Spin up Databases Lightning Fast') }}
                 </h2>
 
                 <p class="mb-4">{{ __('You\'re only clicks away from spinning up your favorite database service using SnapDB. Select your desired database service, choose a port and submit. SnapDB provisions and starts up your service without funky dependencies.') }}</p>
@@ -48,9 +48,26 @@
                 <p>{{ __('It\'s really that easy.') }}</p>
             </div>
             <div class="block pl-8 md:pl-0">
-                <div class="h-full min-h-[260px] rounded-2xl border border-theme-border bg-white/10 rounded-b-none border-b-0 rounded-r-none pt-2 pl-2" style="background-image: url('{{ asset('img/fb-1.png') }}')">
-                </div>
+                <div class="h-full min-h-[300px] bg-left-top" style="background-image: url('{{ asset('img/fb-1.png') }}')"></div>
             </div>
+        </x-landing.feature-card>
+
+        <div class="grid grid-cols-1 md:grid-cols-7 mt-4 gap-4">
+            <x-landing.feature-card class="col-span-4 pt-10 pl-10 pr-10">
+                <h2 class="font-biggo text-2xl mb-4 flex items-center gap-2">
+                    <x-tabler-stack-2-filled class="size-6 inline" />
+                    {{ __('Multiple Version Management') }}
+                </h2>
+
+                <p class="mb-4">{!! __('MySQL version 9.0? MariaDB version 11.2.6? And maybe even Redis 7.4? <strong>All running at once?</strong> Yes, and without breaking sweat.') !!}</p>
+
+                <p>{{ __('SnapDB allows you to run multiple versions and types of database services at once.') }}</p>
+
+                <div class="w-full min-h-[350px] bg-top bg-contain bg-no-repeat lg:bg-auto" style="background-image: url('{{ asset('img/fb-2.png') }}')"></div>
+            </x-landing.feature-card>
+            <x-landing.feature-card class="col-span-3">
+                Hi
+            </x-landing.feature-card>
         </div>
     </x-container>
 </x-layout>
