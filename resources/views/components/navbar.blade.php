@@ -4,7 +4,7 @@
     :class="{
         'border-b border-black-500 bg-blur-2xl bg-opacity-100': topOfPage,
         ' bg-opacity-50 bg-blur-none ': !topOfPage }"
-    class="bg-gray-50 w-full fixed top-0 left-0 transition-all z-40 bg-opacity-50 bg-blur-none"
+    class="select-none bg-gray-50 w-full fixed top-0 left-0 transition-all z-40 bg-opacity-50 bg-blur-none"
 >
     <div class="w-full flex justify-between py-4 px-8 md:px-24">
         <div class="flex justify-between w-full max-w-7xl mx-auto">
