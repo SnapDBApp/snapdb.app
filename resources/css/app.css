@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-biggo {
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+}

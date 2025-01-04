@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>SnapDB</title>
+    <defs>
+        <linearGradient x1="50%" y1="1.59856861e-15%" x2="50%" y2="99.5847902%" id="linearGradient-1">
+            <stop stop-color="#FFF1CA" offset="0%"></stop>
+            <stop stop-color="#FFD354" offset="100%"></stop>
+        </linearGradient>
+        <path d="M319.160105,0 L80.7899013,0 C36.1454818,0 0,36.15 0,80.8 L0,319.25 C0,363.85 36.1454818,400 80.7899013,400 L319.210099,400 C363.804524,400 400,363.85 400,319.2 L400,80.8 C399.950006,36.15 363.804524,0 319.160105,0 Z" id="path-2"></path>
+        <path d="M199.55567,262.714847 C197.978165,262.266288 195.649468,261.443932 194.297321,260.771094 C192.945174,260.098257 172.963447,240.810254 149.826711,217.933786 C111.591001,180.105378 107.309202,176.068354 102.877165,173.975083 C94.3135677,169.938059 82.6700803,168.741904 80.942337,171.732292 C80.5667406,172.405129 77.2614926,177.11499 73.5806482,182.273409 C69.8246845,187.431829 61.8620415,199.094342 55.8524996,208.140266 C43.5329387,226.680671 38.2745895,232.287649 30.8377814,235.128517 C22.2741842,238.343184 14.2364219,236.025634 6.42401746,228.026346 C-0.186478632,221.223213 -1.61374483,214.943398 1.76662249,207.766467 C2.66805377,205.747955 6.04842109,199.991458 9.12831131,195.057318 C16.189523,183.918123 17.4665507,181.226773 22.8751384,167.844787 C30.161708,149.60342 30.98802,146.239234 30.98802,135.997155 C31.0631392,130.016379 30.462185,123.811324 29.3353959,117.30723 C27.2320563,105.270918 26.5559828,92.8608078 27.6076526,85.5343572 C30.3870658,66.2463546 40.2276906,47.2573907 55.8524996,31.1840552 C70.8763543,15.5592778 87.3274753,5.9900362 106.858486,1.28017509 C110.914927,0.30829899 115.271845,-0.0654995109 123.910562,0.00926018924 C134.877976,0.0840198894 135.929645,0.23353929 142.089426,2.3268109 C145.695151,3.5977258 150.653023,5.7657571 152.98172,7.11143171 C156.211849,8.98042421 168.982126,21.3157747 201.65901,53.9857637 C249.509987,101.906732 249.359749,101.682452 249.960703,110.205058 C250.711896,121.119974 240.570794,132.632968 230.054095,132.632968 L226.823967,132.632968 L226.823967,136.595232 C226.823967,143.622644 224.945985,148.182986 220.138351,152.892847 C215.480956,157.378429 210.823561,159.54646 205.490093,159.54646 L202.410203,159.54646 L202.335083,164.63012 C202.259964,170.461377 200.532221,174.946959 196.701138,179.357781 C194.147082,182.19865 186.409797,186.459952 183.630384,186.459952 C182.653834,186.459952 188.738495,192.964046 202.560441,206.869351 C213.753213,218.008546 223.518719,228.400144 224.269911,229.820579 C230.354572,241.483092 225.546939,256.061233 213.978571,261.144893 C209.847011,263.013885 203.461872,263.686723 199.55567,262.714847 Z" id="path-4"></path>
+        <filter x="-24.6%" y="-33.6%" width="149.2%" height="147.9%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="-27" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="16" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.725260417   0 0 0 0 0.725260417   0 0 0 0 0.725260417  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="-20" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="14" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-21.4%" y="-30.6%" width="142.8%" height="141.8%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="17" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="9" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.353062726   0 0 0 0 0.353062726   0 0 0 0 0.353062726  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="8" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="0" dy="3" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.568627451   0 0 0 0 0.435294118   0 0 0 0 0.592156863  0 0 0 1 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="SnapDB" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon">
+            <g id="bg">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="bg-solid" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"></use>
+                <g id="bg-design" mask="url(#mask-3)">
+                    <g transform="translate(0, -1.0526)">
+                        <rect id="Rectangle" stroke="none" fill="#FF9701" fill-rule="evenodd" x="0" y="1.05263158" width="120" height="400"></rect>
+                        <line x1="121.052632" y1="-8.66813931e-15" x2="121.052632" y2="425.263158" id="Line" stroke="#A56100" stroke-width="6" fill="none" stroke-linecap="square"></line>
+                        <line x1="121.052632" y1="123.157895" x2="444.210526" y2="123.157895" id="Line" stroke="#A56100" stroke-width="6" fill="none" stroke-linecap="square"></line>
+                    </g>
+                </g>
+            </g>
+            <g id="snap-svg" transform="translate(201, 198) scale(-1, 1) rotate(-180) translate(-201, -198)translate(76, 58)" fill-rule="nonzero">
+                <g id="Path">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-4"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-4"></use>
+                </g>
+                <path d="M86.1667989,279.569278 C83.5776934,278.513876 83.7256423,276.478457 87.2024411,260.64742 C89.0518021,252.053429 90.9751376,244.590227 91.3450099,244.137911 C91.7888565,243.61021 93.2683454,243.157895 94.5998853,243.157895 C99.1123263,243.157895 99.1863007,244.665612 95.2656553,262.079752 C93.3423198,270.522972 91.2710354,278.06156 90.6052654,278.815419 C89.4956488,280.096979 88.01616,280.323137 86.1667989,279.569278 Z" id="Path" fill="#FFFFFF"></path>
+                <path d="M120.795121,276.269621 C120.212822,275.309326 117.592478,268.291782 114.972134,260.609418 C110.459319,247.534626 110.240957,246.500462 111.25998,244.875346 C112.788514,242.585411 116.282306,242.585411 117.738053,244.875346 C119.1938,247.313019 127.637131,272.354571 127.637131,274.34903 C127.637131,276.712835 126.326959,277.894737 123.852189,277.894737 C122.542017,277.894737 121.450207,277.303786 120.795121,276.269621 Z" id="Path" fill="#FFFFFF"></path>
+                <path d="M54.0099058,260.96003 C51.2436757,258.142804 52.3651203,256.315414 63.8786185,244.513519 C69.9344195,238.269936 75.6164056,233.016189 76.5883242,232.711624 C78.8312135,232.178636 81.2236287,234.386732 81.2236287,236.975535 C81.2236287,238.49836 78.6816875,241.54401 69.7848935,250.60482 C58.1218694,262.406714 56.4770839,263.548833 54.0099058,260.96003 Z" id="Path" fill="#FFFFFF"></path>
+                <path d="M140.998448,249.303829 C134.414795,243.962792 128.579285,238.918479 128.130399,238.028306 C126.185229,234.393433 130.374826,231.055285 134.040724,233.429079 C139.352535,236.91559 158.130909,252.567796 158.205723,253.680512 C158.430166,256.870298 156.933881,258.947368 154.315382,258.947368 C153.642054,258.947368 147.656915,254.570685 140.998448,249.303829 Z" id="Path" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
