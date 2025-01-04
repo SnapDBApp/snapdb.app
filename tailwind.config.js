@@ -15,7 +15,8 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                snapdb: '#FFD353'
+                snapdb: '#FFD353',
+                snapdblight: '#FFEEBF'
             }
         },
     },
