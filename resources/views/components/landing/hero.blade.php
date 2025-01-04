@@ -9,7 +9,7 @@
         <div class="py-24 sm:py-32 lg:pb-40">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl text-center">
-                    <h1 class="select-none text-balance text-6xl font-semibold tracking-tight text-gray-900"
+                    <h1 class="select-none text-balance text-4xl md:text-6xl font-semibold tracking-tight text-gray-900"
                         x-data="{ active: 0 }"
                         x-init="setInterval(() => { active = (active + 1) % {{ count($switchingText) }} }, 3000)"
                     >
