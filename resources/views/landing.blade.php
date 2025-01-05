@@ -74,7 +74,12 @@
 
                 <p>{{ __('If any issues arise with your database services, SnapDB detects it within seconds and lets you know. Logs and other useful files are made available at your convenience.') }}</p>
 
-                <img src="{{ asset('img/fb-3.png') }}" class="w-full" alt="">
+                <div class="notification-holder py-4">
+                    <x-macos-notification>
+                        <x-slot:title>{{ __('Service warning') }}</x-slot>
+                        <x-slot:body>{{ __('MySQL is not binding to port correctly. Please inspect the service logs for more details.') }}</x-slot>
+                    </x-macos-notification>
+                </div>
             </x-landing.feature-card>
         </div>
     </x-container>

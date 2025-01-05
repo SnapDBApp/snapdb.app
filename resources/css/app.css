@@ -6,3 +6,9 @@
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
 }
+
+.font-apple {
+    letter-spacing: -0.025em;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+}

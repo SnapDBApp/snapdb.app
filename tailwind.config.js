@@ -16,7 +16,8 @@ export default {
             },
             colors: {
                 snapdb: '#FFD353',
-                snapdblight: '#FFEEBF'
+                snapdblight: '#FFEEBF',
+                macos: '#EFEDF1'
             }
         },
     },
