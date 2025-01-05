@@ -31,7 +31,7 @@
 
                 <div class="flex justify-center mt-16 sm:mt-24">
                     <div class="inline-block -m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-                        <img src="{{ asset('img/snapdb-window.png') }}" alt="App screenshot" class="rounded-md shadow-2xl ring-1 ring-gray-900/10 w-full max-w-[950px]">
+                        <img src="{{ asset('img/snapdb-window.png') }}" alt="App screenshot" class="rounded-xl shadow-2xl w-full max-w-[950px]">
                     </div>
                 </div>
             </div>
