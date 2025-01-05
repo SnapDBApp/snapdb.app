@@ -140,4 +140,6 @@
             </div>
         </div>
     </x-container>
+
+    <x-landing.pricing />
 </x-layout>
