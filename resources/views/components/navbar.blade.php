@@ -17,7 +17,7 @@
             <div class="flex items-center">
                 <span class="sr-only">SnapDB</span>
                 <a href="{{ route('landing') }}">
-                    <img class="h-8 w-auto sm:h-10" src="{{ asset('img/snapdb-logo.svg') }}" alt="SnapDB Logo">
+                    <x-logo class="h-8 w-auto sm:h-10" />
                 </a>
 
                 <div class="flex flex-col ml-4">

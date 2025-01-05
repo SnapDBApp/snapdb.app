@@ -20,3 +20,8 @@
 .underline-thick {
     text-decoration-thickness: 4px;
 }
+
+.snapdb-border {
+    -o-border-image: radial-gradient(circle,#323638,#2a2e2f,#232627,#1b1e1f,#141617) 1;
+    border-image: radial-gradient(circle,#323638,#2a2e2f,#232627,#1b1e1f,#141617) 1;
+}
