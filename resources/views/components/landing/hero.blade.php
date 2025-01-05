@@ -1,5 +1,5 @@
 @props([
-    'switchingText' => ['Developers', 'Data Scientists', 'Database Administrators', 'Data Analysts', 'DevOps Engineers', 'Educators', 'Hobbyists', 'Consultants', 'Champions'],
+    'switchingText' => ['Developers', 'Data Scientists', 'Database Administrators', 'Data Analysts', 'DevOps Engineers', 'Students', 'Educators', 'Hobbyists', 'Consultants', 'Champions'],
 ])
 <main class="isolate">
     <div class="relative pt-14">
