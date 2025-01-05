@@ -36,7 +36,7 @@
 {{--    </x-container>--}}
 
     <x-container>
-        <x-landing.feature-card class="bg-gradient-to-tr grid grid-cols-1 md:grid-cols-2 gap-6 pt-10 pl-2 md:pl-10">
+        <x-landing.feature-card class="bg-gradient-to-tr grid grid-cols-1 lg:grid-cols-2 gap-6 pt-10 pl-2 md:pl-10">
             <div class="px-8 lg:px-0">
                 <h2 class="font-biggo text-4xl font-bold mb-4 gap-2">
                     <x-tabler-bolt-filled class="size-6 inline" />
@@ -48,7 +48,7 @@
                 <p>{{ __('It is really that easy.') }}</p>
             </div>
             <div class="block pl-8 md:pl-0">
-                <div class="h-full min-h-[300px] bg-left-top" style="background-image: url('{{ asset('img/fb-1.png') }}')"></div>
+                <video class="h-full lg:min-h-[300px] rounded-tl-lg shadow-md" autoplay loop muted src="{{ asset('video/spin-up-db.mp4') }}"></video>
             </div>
         </x-landing.feature-card>
 
