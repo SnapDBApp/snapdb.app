@@ -13,7 +13,7 @@
                         x-data="{ active: 0 }"
                         x-init="setInterval(() => { active = (active + 1) % {{ count($switchingText) }} }, 1500)"
                     >
-                        {{ __('Database tool for ') }}
+                        Database tool for
                         <p class="h-12 md:h-16 block relative">
                         @foreach($switchingText as $index => $text)
                             <span x-show="active === {{ $index }}" x-transition:enter="transition ease-out duration-300 delay-300" x-transition:enter-start="opacity-0 translate-y-full" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-full" class="w-full absolute left-1/2 -translate-x-1/2 will-change-transform inline underline decoration-snapdb">{{ $text }}</span>
@@ -21,7 +21,7 @@
                         </p>
                     </h1>
                     <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-                        {{ __('SnapDB manages databases for you, so you can focus on important stuff.') }}
+                        SnapDB manages databases for you, so you can focus on important stuff.
                     </p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
                         <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
