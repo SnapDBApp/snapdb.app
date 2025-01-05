@@ -11,7 +11,7 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-4xl sm:text-center">
             <h2 class="font-biggo text-pretty sm:text-balance tracking-tight text-5xl sm:text-5xl font-semibold mb-4 gap-2">
-                Buy once, <span class="underline decoration-snapdb" style="text-decoration-thickness: 4px;">keep forever</span>
+                Buy once, <span class="snapdb-underline underline-thick">keep forever</span>
             </h2>
 
             <p class="mx-auto mt-6 max-w-2xl text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
@@ -26,7 +26,7 @@
                 </p>
                 <div class="mt-10 flex items-center gap-x-4">
                     <h4 class="flex-none text-sm/6 font-semibold">
-                        <x-tabler-star-filled class="text-snapdb size-4 inline" />
+                        <x-tabler-star-filled class="text-snapdb-900 size-4 inline" />
                         What’s included
                     </h4>
                     <div class="h-px flex-auto bg-gray-100"></div>
@@ -34,7 +34,7 @@
                 <ul role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm/6 text-gray-600 sm:grid-cols-2 sm:gap-6">
                     @foreach($includedInLifetimeLicense as $feature)
                     <li class="flex gap-x-3 items-center">
-                        <x-tabler-circle-check-filled class="text-snapdb size-4 inline" />
+                        <x-tabler-circle-check-filled class="text-snapdb-900 size-4 inline" />
 
                         {{ $feature }}
                     </li>
@@ -49,7 +49,21 @@
                             <span class="text-5xl font-semibold tracking-tight text-gray-900">$14,99</span>
                             <span class="text-sm/6 font-semibold tracking-wide text-gray-600">USD</span>
                         </p>
-                        <a href="#" class="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get access</a>
+                        <x-btn.primary
+                            as="a"
+                            class="mt-4"
+                            x-data="{
+                                paddleItems: [
+                                    {
+                                        priceId: 'pri_01jgvkbfd9kcw7h80rwdp274qw',
+                                        quantity: 1
+                                    }
+                                ]
+                            }"
+                            @click="Paddle.Checkout.open({items: paddleItems});"
+                        >
+                            Purchase
+                        </x-btn.primary>
                         <p class="mt-6 text-xs/5 text-gray-600">Invoices and receipts available for easy company reimbursement</p>
                     </div>
                 </div>

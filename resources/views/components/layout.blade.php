@@ -13,6 +13,16 @@
 
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script type="text/javascript">
+        @if(! app()->isProduction())
+        Paddle.Environment.set("sandbox");
+       @endif
+
+        Paddle.Initialize({
+            token: '{{ config('paddle.client_side_token') }}'
+        });
+    </script>
 </head>
     <body class="font-sans antialiased bg-gray-50 dark:bg-black dark:text-white/50">
     {{ $slot }}

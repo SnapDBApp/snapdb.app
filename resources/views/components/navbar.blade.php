@@ -31,9 +31,9 @@
             </div>
 
             <div class="hidden md:flex items-center space-x-8 text-gray-500">
-                <a href="#" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap group disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none h-10 text-sm rounded-lg px-4 inline-flex  bg-white hover:bg-zinc-50 dark:bg-gray-800 dark:hover:bg-zinc-700/50 text-gray-500 dark:text-gray-200 border border-zinc-200 hover:border-zinc-200 border-b-zinc-300/80 dark:border-zinc-700 dark:hover:border-zinc-700 shadow-sm [[data-flux-button-group]_&amp;]:border-l-0 [:is([data-flux-button-group]>&amp;:first-child,_[data-flux-button-group]_:first-child>&amp;)]:border-l-[1px]  bg-white" data-flux-button="data-flux-button" data-flux-group-target="data-flux-group-target">
+                <x-btn.secondary as="a" href="#">
                     Manage License
-                </a>
+                </x-btn.secondary>
             </div>
 
             <div class="md:hidden flex items-center cursor-pointer" @click="mobileMenuOpen = true">

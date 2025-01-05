@@ -40,7 +40,7 @@
             <div class="px-8 lg:px-0">
                 <h2 class="font-biggo text-4xl font-bold mb-4 gap-2">
                     <x-tabler-bolt-filled class="size-6 inline" />
-                    Spin up Databases <span class="underline decoration-snapdb" style="text-decoration-thickness: 4px;">Lightning</span> Fast
+                    Spin up Databases <span class="snapdb-underline underline-thick">Lightning</span> Fast
                 </h2>
 
                 <p class="mb-4">You are only clicks away from spinning up your favorite database service using SnapDB. Select your desired database service, choose a port and submit. SnapDB provisions and starts up your service without funky dependencies.</p>
@@ -56,7 +56,7 @@
             <x-landing.feature-card class="bg-gradient-to-bl col-span-4 pt-10 pl-10 pr-10">
                 <h2 class="font-biggo text-4xl font-bold mb-4 gap-2">
                     <x-tabler-stack-2-filled class="size-6 inline" />
-                    <span class="underline decoration-snapdb" style="text-decoration-thickness: 4px;">Multiple</span> Version Management
+                    <span class="snapdb-underline underline-thick">Multiple</span> Version Management
                 </h2>
 
                 <p class="mb-4">MySQL version 9.0? MariaDB version 11.2.6? And maybe even Redis 7.4? <strong>All running at once?</strong> Yes, and without breaking sweat.</p>
@@ -125,7 +125,7 @@
             <div class="flex items-center">
                 <div>
                     <h2 class="font-biggo text-4xl font-bold mb-4 gap-2">
-                        Fast and Reliable, <span class="underline decoration-snapdb" style="text-decoration-thickness: 4px;">Without Dependencies</span>
+                        Fast and Reliable, <span class="snapdb-underline underline-thick">Without Dependencies</span>
                     </h2>
 
                     <p class="mt-8 flex flex-col gap-4 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">

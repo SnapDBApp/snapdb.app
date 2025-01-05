@@ -12,3 +12,11 @@
     font-family: "Inter", serif;
     font-optical-sizing: auto;
 }
+
+.snapdb-underline {
+    @apply underline decoration-snapdb-500;
+}
+
+.underline-thick {
+    text-decoration-thickness: 4px;
+}
