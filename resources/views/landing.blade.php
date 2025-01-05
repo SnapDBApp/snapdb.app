@@ -74,11 +74,40 @@
 
                 <p>{{ __('If any issues arise with your database services, SnapDB detects it within seconds and lets you know. Logs and other useful files are made available at your convenience.') }}</p>
 
-                <div class="notification-holder py-4">
-                    <x-macos-notification>
-                        <x-slot:title>{{ __('Service warning') }}</x-slot>
-                        <x-slot:body>{{ __('MySQL is not binding to port correctly. Please inspect the service logs for more details.') }}</x-slot>
-                    </x-macos-notification>
+                @php($notifications = [
+                    __('MySQL is not binding to port correctly. Please inspect the service logs for more details.'),
+                    __('Redis has died in the background due to a failure.'),
+                    __('MariaDB appears to be consuming higher resources than usual.'),
+                    __('PostgreSQL has crashed. Please inspect the service logs for more details.'),
+                    __('MongoDB has died in the background due to a failure.'),
+                ])
+                <div class="notification-holder py-4 flex flex-col gap-4"
+                     x-data="{
+                        active: 0,
+                        previous: null,
+                        startInterval() {
+                            setInterval(() => {
+                                this.previous = this.active;
+                                this.active = (this.active + 1) % {{ count($notifications) }};
+                            }, 4000);
+                        }
+                     }"
+                     x-init="startInterval()"
+                >
+                    @foreach($notifications as $index => $notification)
+                        <x-macos-notification
+                            x-show="active === {{ $index }} || previous === {{ $index }}"
+                            x-transition:enter="transition duration-500 transform ease-out"
+                            x-transition:enter-start="opacity-0 translate-x-10"
+                            x-transition:enter-end="opacity-100 translate-x-0"
+                            x-transition:leave="transition-opacity duration-1000"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                        >
+                            <x-slot:title>{{ __('Service warning') }}</x-slot>
+                            <x-slot:body>{{ $notification }}</x-slot>
+                        </x-macos-notification>
+                    @endforeach
                 </div>
             </x-landing.feature-card>
         </div>

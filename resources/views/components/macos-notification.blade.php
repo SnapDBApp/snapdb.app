@@ -1,4 +1,4 @@
-<div class="relative group select-none macos-notification font-apple bg-macos shadow-md p-4 rounded-3xl flex gap-4">
+<div {{ $attributes->merge(['class' => 'relative group select-none macos-notification font-apple bg-macos shadow-md p-4 rounded-3xl flex gap-4']) }}>
     <div class="flex items-center">
         <img class="h-[50px] w-[50px] px-2" src="{{ asset('img/snapdb-logo.svg') }}" alt="{{ __('SnapDB Logo') }}">
     </div>
