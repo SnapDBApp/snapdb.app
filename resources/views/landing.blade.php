@@ -85,14 +85,21 @@
                      x-data="{
                         active: 0,
                         previous: null,
-                        startInterval() {
-                            setInterval(() => {
+                        startTimeout(timeout = 3400) {
+                            setTimeout(() => {
+                                this.startTimeout(Math.floor(Math.random() * 2000) + 2000);
+
+                                if(this.previous !== null) {
+                                    this.previous = null;
+                                    return;
+                                }
+
                                 this.previous = this.active;
                                 this.active = (this.active + 1) % {{ count($notifications) }};
-                            }, 4000);
+                            }, timeout);
                         }
                      }"
-                     x-init="startInterval()"
+                     x-init="startTimeout()"
                 >
                     @foreach($notifications as $index => $notification)
                         <x-macos-notification
