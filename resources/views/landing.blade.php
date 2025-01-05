@@ -142,4 +142,6 @@
     </x-container>
 
     <x-landing.pricing />
+
+    <x-landing.faq />
 </x-layout>
