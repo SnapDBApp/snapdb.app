@@ -34,6 +34,8 @@
                         <img src="{{ asset('img/snapdb-window.png') }}" alt="App screenshot" class="rounded-xl shadow-2xl w-full max-w-[950px]">
                     </div>
                 </div>
+
+                <span id="features"></span>
             </div>
         </div>
         <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
