@@ -141,7 +141,7 @@
         </div>
     </x-container>
 
-    <x-landing.pricing />
+    <x-landing.pricing-new />
 
     <x-landing.faq />
 </x-layout>
