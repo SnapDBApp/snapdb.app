@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\LicenseResource\Pages;
+use App\Forms\Components\LicenseKey;
 use App\Models\License;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
@@ -12,6 +13,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Support\Facades\Hash;
 
 class LicenseResource extends Resource
 {
@@ -29,6 +31,12 @@ class LicenseResource extends Resource
 
                 DateTimePicker::make('expires_at')
                     ->hint('The date the license expires. Leave empty for no expiration.'),
+
+                TextInput::make('key')
+                    ->label('License Key')
+                    ->dehydrateStateUsing(fn ($state) => Hash::make($state))
+                    ->required()
+                    ->visibleOn('create')
             ]);
     }
 
