@@ -65,6 +65,14 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'paddle' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/paddle.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'days' => 7,
+            'replace_placeholders' => true,
+        ],
+
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),
