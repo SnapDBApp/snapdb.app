@@ -48,20 +48,22 @@
                 <p>It is really that easy.</p>
             </div>
             <div class="block pl-8 md:pl-0">
-                <video class="h-full lg:min-h-[300px] rounded-tl-lg shadow-md" autoplay loop muted src="{{ asset('video/spin-up-db.mp4') }}"></video>
+                <video class="h-full lg:min-h-[300px] rounded-tl-lg shadow-md" autoplay loop playsInline muted src="{{ asset('video/spin-up-db.mp4') }}"></video>
             </div>
         </x-landing.feature-card>
 
         <div class="grid grid-cols-1 md:grid-cols-7 mt-4 gap-4">
-            <x-landing.feature-card class="bg-gradient-to-bl col-span-4 pt-10 pl-10 pr-10">
-                <h2 class="font-biggo text-4xl font-bold mb-4 gap-2">
-                    <x-tabler-stack-2-filled class="size-6 inline" />
-                    <span class="snapdb-underline underline-thick">Multiple</span> Version Management
-                </h2>
+            <x-landing.feature-card class="bg-gradient-to-bl col-span-4 pt-10 pl-10 pr-10 flex flex-col">
+                <div class="flex-1">
+                    <h2 class="font-biggo text-4xl font-bold mb-4 gap-2">
+                        <x-tabler-stack-2-filled class="size-6 inline" />
+                        <span class="snapdb-underline underline-thick">Multiple</span> Version Management
+                    </h2>
 
-                <p class="mb-4">MySQL version 9.0? MariaDB version 11.2.6? And maybe even Redis 7.4? <strong>All running at once?</strong> Yes, and without breaking sweat.</p>
+                    <p class="mb-4">MySQL version 9.0? MariaDB version 11.2.6? And maybe even Redis 7.4? <strong>All running at once?</strong> Yes, and without breaking sweat.</p>
 
-                <p>SnapDB allows you to run multiple versions and types of database services at once.</p>
+                    <p>SnapDB allows you to run multiple versions and types of database services at once.</p>
+                </div>
 
                 <div class="w-full min-h-[350px] bg-top bg-contain bg-no-repeat lg:bg-auto" style="background-image: url('{{ asset('img/fb-2.png') }}')"></div>
             </x-landing.feature-card>
@@ -81,7 +83,7 @@
                     'PostgreSQL has crashed. Please inspect the service logs for more details.',
                     'MongoDB has died in the background due to a failure.',
                 ])
-                <div class="notification-holder py-4 flex flex-col gap-4"
+                <div class="notification-holder h-[300px] py-4 flex flex-col gap-4"
                      x-data="{
                         active: 0,
                         previous: null,
