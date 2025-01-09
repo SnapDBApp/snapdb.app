@@ -14,7 +14,7 @@ class PaddleWebhookRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'event_id' => ['required', 'string', 'starts_with:evt_'],
+            'event_id' => ['required', 'string'],
             'event_type' => ['required', 'string'],
             'occurred_at' => ['required', 'string'],
             'notification_id' => ['required', 'string'],

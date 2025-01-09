@@ -6,6 +6,8 @@ return [
 
     // Only allow requests from these IP addresses
     'ip-whitelist' => [
+        '127.0.0.1',
+
         // Paddle PRD
         '34.232.58.13',
         '34.195.105.136',

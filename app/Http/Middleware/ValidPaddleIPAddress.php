@@ -16,7 +16,7 @@ class ValidPaddleIPAddress
     public function handle(Request $request, Closure $next): Response
     {
         if(!in_array($request->ip(), config('paddle.ip-whitelist'))) {
-            return response('Unauthorized (blocked IP address)', 401);
+            return response('Unauthorized (blocked IP address ' . $request->ip() .  ')', 401);
         }
 
         return $next($request);
