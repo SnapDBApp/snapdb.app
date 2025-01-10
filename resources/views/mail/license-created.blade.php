@@ -1,4 +1,4 @@
-<div>
+<x-mail.layout>
     <h1>You're in for something great!</h1>
     <h2>Here's your SnapDB license</h2>
 
@@ -6,4 +6,8 @@
 
     <p><strong>License Email:</strong> {{ $licenseEmail }}</p>
     <p><strong>License key:</strong> {{ $licenseKey }}</p>
-</div>
+
+    <x-mail.cta-btn>Download SnapDB</x-mail.cta-btn>
+
+    <p>Happy database-ing!</p>
+</x-mail.layout>
