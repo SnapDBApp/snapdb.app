@@ -3,7 +3,12 @@
 use App\Events\Paddle\TransactionCompleted;
 use App\Facades\Paddle;
 use App\Listeners\CreateAndSendLicense;
+use App\Mail\LicenseCreated;
 use App\Models\License;
+
+beforeEach(function () {
+    Mail::fake();
+});
 
 it('fails for invalid customer', function () {
     $event = new TransactionCompleted([
@@ -46,4 +51,7 @@ it('creates and sends a license', function () {
         ->and($license->email)->toBe('mycustomer@example.com')
         ->and($license->expires_at)->toBeNull()
         ->and($license->key)->toBeString();
+
+    // Expect the license email to be sent
+    Mail::assertSent(LicenseCreated::class, 'mycustomer@example.com');
 });
