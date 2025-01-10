@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Actions\RegenerateLicenseAction;
 use App\Filament\Resources\LicenseResource\Pages\CreateLicense;
 use App\Filament\Resources\LicenseResource\Pages\ViewLicense;
 use App\Filament\Resources\LicenseResource\Pages\ListLicenses;
@@ -35,12 +36,6 @@ class LicenseResource extends Resource
 
                 DateTimePicker::make('expires_at')
                     ->hint('The date the license expires. Leave empty for no expiration.'),
-
-                TextInput::make('key')
-                    ->label('License Key')
-                    ->dehydrateStateUsing(fn ($state) => Hash::make($state))
-                    ->required()
-                    ->visibleOn('create'),
             ]);
     }
 
@@ -53,6 +48,14 @@ class LicenseResource extends Resource
                         return $record->isValid();
                     })
                     ->boolean(),
+
+                TextColumn::make('key_first_part')
+                    ->getStateUsing(function (License $record) {
+                        return $record->key_first_part . '*****';
+                    })
+                    ->label('Key')
+                    ->sortable()
+                    ->searchable(),
 
                 TextColumn::make('email')
                     ->sortable()

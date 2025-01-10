@@ -18,9 +18,11 @@ class LicenseFactory extends Factory
     public function definition(): array
     {
         $expires = $this->faker->boolean;
+        $key = $this->faker->uuid;
 
         return [
-            'key' => Hash::make($this->faker->uuid),
+            'key' => $key,
+            'key_first_part' => substr($key, 0, 5),
             'email' => $this->faker->unique()->safeEmail,
             'expires_at' => $expires ? $this->faker->optional()->dateTimeBetween('now', '+1 year') : null,
         ];

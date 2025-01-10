@@ -24,14 +24,13 @@ class CreateAndSendLicense implements ShouldQueue
         $customerEmail = $customer['data']['email'];
 
         // Create the license
-        $licenseKey = Str::uuid();
-        License::create([
+        $license = License::create([
             'email' => $customerEmail,
-            'key' => Hash::make($licenseKey),
             'expires_at' => null,
             'paddle_customer_id' => $customerID,
             'paddle_transaction_id' => $event->payload['data']['id'],
         ]);
+        $licenseKey = $license->generateAndSaveKey();
 
         // Send the license
         Mail::to($customerEmail)->send(new LicenseCreated(
