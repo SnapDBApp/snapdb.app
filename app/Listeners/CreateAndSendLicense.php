@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\Paddle\TransactionCompleted;
+use App\Facades\Paddle;
 use App\Models\License;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
@@ -16,10 +17,13 @@ class CreateAndSendLicense implements ShouldQueue
      */
     public function handle(TransactionCompleted $event): void
     {
+        // Find the customer
+        $customer = Paddle::getCustomer($event->payload['data']['customer_id']);
+
+        // Create the license
         $licenseKey = Str::uuid();
         $license = License::create([
-//            'email' => $event->payload['data']['email'],
-            'email' => 'idk@gmail.com',
+            'email' => $customer['data']['email'],
             'key' => Hash::make($licenseKey),
             'expires_at' => null,
         ]);
