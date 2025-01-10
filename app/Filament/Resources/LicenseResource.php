@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\LicenseResource\Pages\CreateLicense;
+use App\Filament\Actions\GenerateLicenseAction;
 use App\Filament\Resources\LicenseResource\Pages\ListLicenses;
 use App\Filament\Resources\LicenseResource\Pages\ViewLicense;
 use App\Models\License;
@@ -21,7 +21,6 @@ use Filament\Tables\Table;
 class LicenseResource extends Resource
 {
     protected static ?string $model = License::class;
-
     protected static ?string $navigationIcon = 'heroicon-o-key';
 
     public static function form(Form $form): Form
@@ -31,6 +30,9 @@ class LicenseResource extends Resource
                 Section::make('General')
                     ->columns()
                     ->schema([
+                        TextInput::make('origin')
+                            ->required(),
+
                         TextInput::make('email')
                             ->email()
                             ->required(),
@@ -114,6 +116,9 @@ class LicenseResource extends Resource
             ->actions([
                 ViewAction::make(),
             ])
+            ->headerActions([
+                GenerateLicenseAction::make(),
+            ])
             ->bulkActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
@@ -121,18 +126,15 @@ class LicenseResource extends Resource
             ]);
     }
 
-    public static function getRelations(): array
+    public static function canCreate(): bool
     {
-        return [
-            //
-        ];
+        return false;
     }
 
     public static function getPages(): array
     {
         return [
             'index' => ListLicenses::route('/'),
-            'create' => CreateLicense::route('/create'),
             'view' => ViewLicense::route('/{record}'),
         ];
     }

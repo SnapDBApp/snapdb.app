@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\Enums\LicenseOrigin;
 use App\Events\Paddle\TransactionCompleted;
 use App\Facades\Paddle;
 use App\Mail\LicenseCreated;
@@ -24,6 +25,7 @@ class CreateAndSendLicense implements ShouldQueue
         // Create the license
         $license = License::create([
             'email' => $customerEmail,
+            'origin' => LicenseOrigin::paddle,
             'expires_at' => null,
             'paddle_customer_id' => $customerID,
             'paddle_transaction_id' => $event->payload['data']['id'],

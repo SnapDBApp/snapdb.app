@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\LicenseOrigin;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,6 +22,7 @@ class LicenseFactory extends Factory
 
         return [
             'key' => $key,
+            'origin' => LicenseOrigin::manual,
             'key_first_part' => substr($key, 0, 5),
             'email' => $this->faker->unique()->safeEmail,
             'expires_at' => $expires ? $this->faker->optional()->dateTimeBetween('now', '+1 year') : null,
