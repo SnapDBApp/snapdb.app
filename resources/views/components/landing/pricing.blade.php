@@ -32,7 +32,7 @@
                     <div class="h-px flex-auto bg-gray-100"></div>
                 </div>
                 <ul role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm/6 text-gray-600 sm:grid-cols-2 sm:gap-6">
-                    @foreach($includedInLifetimeLicense as $feature)
+                    @foreach ($includedInLifetimeLicense as $feature)
                     <li class="flex gap-x-3 items-center">
                         <x-tabler-circle-check-filled class="text-snapdb-900 size-4 inline" />
 

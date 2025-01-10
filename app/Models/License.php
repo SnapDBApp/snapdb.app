@@ -18,8 +18,6 @@ class License extends Model
 
     /**
      * Whether the license is valid.
-     *
-     * @return bool
      */
     public function isValid(): bool
     {

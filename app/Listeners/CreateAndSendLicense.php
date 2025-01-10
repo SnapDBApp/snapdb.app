@@ -6,7 +6,6 @@ use App\Events\Paddle\TransactionCompleted;
 use App\Facades\Paddle;
 use App\Models\License;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 

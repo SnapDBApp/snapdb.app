@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Events\Paddle;
+use App\Events\Paddle\TransactionCompleted;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PaddleWebhookRequest;
 use Illuminate\Support\Facades\Log;
@@ -18,7 +18,7 @@ class PaddleWebhookController extends Controller
         Log::channel('paddle')->info('Paddle webhook received', ['payload' => $payload]);
 
         match ($request->event_type) {
-            'transaction.completed' => Paddle\TransactionCompleted::dispatch($payload)
+            'transaction.completed' => TransactionCompleted::dispatch($payload)
         };
 
         return 'ok';

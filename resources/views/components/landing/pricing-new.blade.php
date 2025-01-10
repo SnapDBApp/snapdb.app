@@ -39,7 +39,7 @@
                 Still not convinced? Try SnapDB for free. No credit card required. No strings attached.
             </p>
             <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600 sm:mt-10">
-                @foreach($includedInFreeTier as $feature)
+                @foreach ($includedInFreeTier as $feature)
                     <li class="flex gap-x-3">
                         <x-tabler-check class="text-snapdb-900 size-4 flex-none" />
 
@@ -67,7 +67,7 @@
                 Enjoy SnapDB without limits. Your license will be delivered to you immediately. Pay once and own it forever.
             </p>
             <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600 sm:mt-10">
-                @foreach($includedInLifetimeLicense as $feature)
+                @foreach ($includedInLifetimeLicense as $feature)
                 <li class="flex gap-x-3">
                     <x-tabler-check class="text-snapdb-900 size-4 flex-none" />
 

@@ -11,11 +11,11 @@ class ValidPaddleSignature
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!$request->hasHeader('paddle-signature')) {
+        if (! $request->hasHeader('paddle-signature')) {
             return response('Unauthorized (no signature)', 401);
         }
 
@@ -36,7 +36,7 @@ class ValidPaddleSignature
         $ourSignature = hash_hmac('sha256', $ourSignature, config('paddle.webhook_secret_key'));
 
         // Compare signatures
-        if($ourSignature !== $h1) {
+        if ($ourSignature !== $h1) {
             return response('Unauthorized (signature mismatch)', 401);
         }
 

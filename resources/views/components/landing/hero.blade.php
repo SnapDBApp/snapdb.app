@@ -15,7 +15,7 @@
                     >
                         Database tool for
                         <p class="h-12 md:h-16 block relative">
-                        @foreach($switchingText as $index => $text)
+                        @foreach ($switchingText as $index => $text)
                             <span x-show="active === {{ $index }}" x-transition:enter="transition ease-out duration-300 delay-300" x-transition:enter-start="opacity-0 translate-y-full" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-full" class="w-full absolute left-1/2 -translate-x-1/2 will-change-transform inline snapdb-underline">{{ $text }}</span>
                         @endforeach
                         </p>

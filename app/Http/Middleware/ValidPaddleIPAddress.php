@@ -11,12 +11,12 @@ class ValidPaddleIPAddress
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!in_array($request->ip(), config('paddle.ip-whitelist'))) {
-            return response('Unauthorized (blocked IP address ' . $request->ip() .  ')', 401);
+        if (! in_array($request->ip(), config('paddle.ip-whitelist'))) {
+            return response('Unauthorized (blocked IP address ' . $request->ip() . ')', 401);
         }
 
         return $next($request);

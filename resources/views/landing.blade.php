@@ -103,7 +103,7 @@
                      }"
                      x-init="startTimeout()"
                 >
-                    @foreach($notifications as $index => $notification)
+                    @foreach ($notifications as $index => $notification)
                         <x-macos-notification
                             x-show="active === {{ $index }} || previous === {{ $index }}"
                             x-transition:enter="transition duration-500 transform ease-out"

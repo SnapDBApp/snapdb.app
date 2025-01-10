@@ -35,6 +35,14 @@ class User extends Authenticatable implements FilamentUser
     ];
 
     /**
+     * Whether the user can access the Filament admin panel.
+     */
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return true;
+    }
+
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -45,16 +53,5 @@ class User extends Authenticatable implements FilamentUser
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
-    }
-
-    /**
-     * Whether the user can access the Filament admin panel.
-     *
-     * @param Panel $panel
-     * @return bool
-     */
-    public function canAccessPanel(Panel $panel): bool
-    {
-        return true;
     }
 }

@@ -2,14 +2,17 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\LicenseResource\Pages;
-use App\Forms\Components\LicenseKey;
+use App\Filament\Resources\LicenseResource\Pages\CreateLicense;
+use App\Filament\Resources\LicenseResource\Pages\EditLicense;
+use App\Filament\Resources\LicenseResource\Pages\ListLicenses;
 use App\Models\License;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -36,7 +39,7 @@ class LicenseResource extends Resource
                     ->label('License Key')
                     ->dehydrateStateUsing(fn ($state) => Hash::make($state))
                     ->required()
-                    ->visibleOn('create')
+                    ->visibleOn('create'),
             ]);
     }
 
@@ -45,7 +48,7 @@ class LicenseResource extends Resource
         return $table
             ->columns([
                 IconColumn::make('Valid')
-                    ->getStateUsing(function(License $record) {
+                    ->getStateUsing(function (License $record) {
                         return $record->isValid();
                     })
                     ->boolean(),
@@ -68,11 +71,11 @@ class LicenseResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -87,9 +90,9 @@ class LicenseResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListLicenses::route('/'),
-            'create' => Pages\CreateLicense::route('/create'),
-            'edit' => Pages\EditLicense::route('/{record}/edit'),
+            'index' => ListLicenses::route('/'),
+            'create' => CreateLicense::route('/create'),
+            'edit' => EditLicense::route('/{record}/edit'),
         ];
     }
 }
