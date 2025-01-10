@@ -21,7 +21,7 @@ class CreateAndSendLicense implements ShouldQueue
 
         // Create the license
         $licenseKey = Str::uuid();
-        $license = License::create([
+        License::create([
             'email' => $customer['data']['email'],
             'key' => Hash::make($licenseKey),
             'expires_at' => null,
