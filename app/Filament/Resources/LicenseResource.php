@@ -7,7 +7,9 @@ use App\Filament\Resources\LicenseResource\Pages\CreateLicense;
 use App\Filament\Resources\LicenseResource\Pages\ViewLicense;
 use App\Filament\Resources\LicenseResource\Pages\ListLicenses;
 use App\Models\License;
+use Filament\Forms\Components\Card;
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -30,12 +32,33 @@ class LicenseResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('email')
-                    ->email()
-                    ->required(),
+                Section::make('General')
+                    ->columns()
+                    ->schema([
+                        TextInput::make('email')
+                            ->email()
+                            ->required(),
 
-                DateTimePicker::make('expires_at')
-                    ->hint('The date the license expires. Leave empty for no expiration.'),
+                        DateTimePicker::make('expires_at')
+                            ->hint('The date the license expires. Empty for no expiration.'),
+
+                        TextInput::make('key_first_part')
+                            ->label('Key')
+                            ->hint('First part of the license key.')
+                            ->formatStateUsing(function (License $record) {
+                                return $record->key_first_part . '*****';
+                            })
+                    ]),
+
+                Section::make('Paddle')
+                    ->columns()
+                    ->schema([
+                        TextInput::make('paddle_customer_id')
+                            ->label('Customer ID (Paddle)'),
+
+                        TextInput::make('paddle_transaction_id')
+                            ->label('Transaction ID (Paddle)'),
+                    ])
             ]);
     }
 
