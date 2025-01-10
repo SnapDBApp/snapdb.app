@@ -12,9 +12,9 @@ return new class extends Migration
             $table->id();
             $table->string('origin');
             $table->integer('max_devices')->default(1);
-            $table->string('key')->nullable();
+            $table->string('key')->nullable()->index();
             $table->string('key_first_part')->nullable();
-            $table->string('email');
+            $table->string('email')->index();
             $table->timestamp('expires_at')->nullable();
             $table->string('paddle_customer_id')->nullable();
             $table->string('paddle_transaction_id')->nullable();

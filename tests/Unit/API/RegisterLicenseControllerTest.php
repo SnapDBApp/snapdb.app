@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Device;
 use App\Models\License;
 
 beforeEach(function () {
@@ -9,9 +10,11 @@ beforeEach(function () {
 it('returns not_found for licenses that are invalid', function () {
     $response = $this->withHeaders([
         'SnapDB-License-Client' => 1,
-    ])->postJson('/api/license/validate', [
+    ])->postJson('/api/license/register', [
         'email' => 'john.doe@example.com',
         'key' => 'invalid-key',
+        'deviceID' => 'a90c3b34-0688-4a3b-abc9-aeaedcdbc1e4',
+        'deviceName' => 'Johns-MacBook-Pro',
     ]);
 
     $response->assertStatus(404)
@@ -26,45 +29,56 @@ it('returns expired for licenses that are expired', function () {
 
     $response = $this->withHeaders([
         'SnapDB-License-Client' => 1,
-    ])->postJson('/api/license/validate', [
+    ])->postJson('/api/license/register', [
         'email' => $license->email,
         'key' => $rawKey,
+        'deviceID' => 'a90c3b34-0688-4a3b-abc9-aeaedcdbc1e4',
+        'deviceName' => 'Johns-MacBook-Pro',
     ]);
 
     $response->assertStatus(410)
-        ->assertSee('License has expired.');
+        ->assertSee('expired');
 });
 
-it('returns valid for licenses that expire in future', function () {
-    $license = License::factory()->create([
-        'expires_at' => now()->addDay(),
-    ]);
-    $rawKey = $license->generateAndSaveKey();
-
-    $response = $this->withHeaders([
-        'SnapDB-License-Client' => 1,
-    ])->postJson('/api/license/validate', [
-        'email' => $license->email,
-        'key' => $rawKey,
-    ]);
-
-    $response->assertStatus(200)
-        ->assertSee('License is valid.');
-});
-
-it('returns valid for licenses that never expire', function () {
+it('returns max_devices_reached for licenses that already have too many devices', function () {
     $license = License::factory()->create([
         'expires_at' => null,
     ]);
+    Device::factory()->count($license->max_devices)->create([
+        'license_id' => $license->id,
+    ]);
     $rawKey = $license->generateAndSaveKey();
 
     $response = $this->withHeaders([
         'SnapDB-License-Client' => 1,
-    ])->postJson('/api/license/validate', [
+    ])->postJson('/api/license/register', [
         'email' => $license->email,
         'key' => $rawKey,
+        'deviceID' => 'a90c3b34-0688-4a3b-abc9-aeaedcdbc1e4',
+        'deviceName' => 'Johns-MacBook-Pro',
     ]);
 
-    $response->assertStatus(200)
-        ->assertSee('License is valid.');
+    $response->assertStatus(403)
+        ->assertSee('max_devices_reached');
+});
+
+it('registers a device for a license', function () {
+    $license = License::factory()->create([
+        'expires_at' => null,
+        'max_devices' => 1,
+    ]);
+    $rawKey = $license->generateAndSaveKey();
+
+    $response = $this->withHeaders([
+        'SnapDB-License-Client' => 1,
+    ])->postJson('/api/license/register', [
+        'email' => $license->email,
+        'key' => $rawKey,
+        'deviceID' => 'a90c3b34-0688-4a3b-abc9-aeaedcdbc1e4',
+        'deviceName' => 'Johns-MacBook-Pro',
+    ]);
+
+    $response->assertSuccessful();
+
+    expect($license->devices()->count())->toBe(1);
 });

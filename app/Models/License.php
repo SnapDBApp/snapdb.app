@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Str;
 
 class License extends Model
@@ -17,6 +18,19 @@ class License extends Model
         'expires_at' => 'datetime',
         'key' => 'hashed',
     ];
+
+    public function devices(): HasMany
+    {
+        return $this->hasMany(Device::class);
+    }
+
+    /**
+     * Whether the license is expired.
+     */
+    public function isExpired(): bool
+    {
+        return $this->expires_at !== null && $this->expires_at < now();
+    }
 
     /**
      * Sets a new license key and returns it.

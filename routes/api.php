@@ -22,5 +22,6 @@ Route::group([
     'prefix' => '/license',
     'middleware' => [ValidLicenseClient::class],
 ], function () {
-    Route::post('validate', [API\LicenseController::class, 'validate']);
+    Route::post('register', API\RegisterLicenseController::class);
+    Route::post('validate', API\ValidateLicenseController::class);
 });

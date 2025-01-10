@@ -2,27 +2,19 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidateLicenseRequest;
 use App\Models\License;
-use Illuminate\Support\Facades\Hash;
 
-class LicenseController extends Controller
+class ValidateLicenseController extends BaseLicenseController
 {
     /**
      * Validates a license key.
      *
      * @return mixed
      */
-    public function validate(ValidateLicenseRequest $request)
+    public function __invoke(ValidateLicenseRequest $request)
     {
-        // Find the first license that matches the key hash
-        $licenses = License::where('email', $request->email)
-            ->get();
-
-        $license = $licenses->first(function ($license) use ($request) {
-            return Hash::check($request->key, $license->key);
-        });
+        $license = $this->findLicenseFromRequest($request);
 
         // No license found with this combination
         if (! $license) {
@@ -33,10 +25,10 @@ class LicenseController extends Controller
         }
 
         // Check if the license is expired
-        if ($license->expires_at !== null && $license->expires_at < now()) {
+        if ($license->isExpired()) {
             return response()->json([
                 'status' => 'expired',
-                'message' => 'License has expired.',
+                'message' => 'This license has expired. Please renew your license to continue using SnapDB.',
             ], 410);
         }
 

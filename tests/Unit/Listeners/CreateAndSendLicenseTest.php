@@ -30,6 +30,7 @@ it('fails for invalid customer', function () {
 it('creates and sends a license', function () {
     $event = new TransactionCompleted([
         'data' => [
+            'id' => 'tnx_jdhejd3dn22e2u8esji2',
             'customer_id' => 'ctm_01hv6y1jedq4p1n0yqn5ba3ky4',
         ],
     ]);
