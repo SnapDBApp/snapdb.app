@@ -19,7 +19,8 @@ class CreateAndSendLicense implements ShouldQueue
     public function handle(TransactionCompleted $event): void
     {
         // Find the customer
-        $customer = Paddle::getCustomer($event->payload['data']['customer_id']);
+        $customerID = $event->payload['data']['customer_id'];
+        $customer = Paddle::getCustomer($customerID);
         $customerEmail = $customer['data']['email'];
 
         // Create the license
@@ -28,6 +29,8 @@ class CreateAndSendLicense implements ShouldQueue
             'email' => $customerEmail,
             'key' => Hash::make($licenseKey),
             'expires_at' => null,
+            'paddle_customer_id' => $customerID,
+            'paddle_transaction_id' => $event->payload['data']['id'],
         ]);
 
         // Send the license

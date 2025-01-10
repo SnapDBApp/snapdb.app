@@ -13,6 +13,8 @@ return new class extends Migration
             $table->string('key');
             $table->string('email');
             $table->timestamp('expires_at')->nullable();
+            $table->string('paddle_customer_id')->nullable();
+            $table->string('paddle_transaction_id')->nullable();
             $table->timestamps();
         });
     }

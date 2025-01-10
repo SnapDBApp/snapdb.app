@@ -3,7 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\LicenseResource\Pages\CreateLicense;
-use App\Filament\Resources\LicenseResource\Pages\EditLicense;
+use App\Filament\Resources\LicenseResource\Pages\ViewLicense;
 use App\Filament\Resources\LicenseResource\Pages\ListLicenses;
 use App\Models\License;
 use Filament\Forms\Components\DateTimePicker;
@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -60,18 +61,36 @@ class LicenseResource extends Resource
                 TextColumn::make('expires_at')
                     ->label('Expires')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(),
 
                 TextColumn::make('created_at')
                     ->label('Created')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(),
+
+                TextColumn::make('updated_at')
+                    ->label('Created')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+
+                TextColumn::make('paddle_customer_id')
+                    ->label('Customer ID (Paddle)')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+
+                TextColumn::make('paddle_transaction_id')
+                    ->label('Transaction ID (Paddle)')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                EditAction::make(),
+                ViewAction::make(),
             ])
             ->bulkActions([
                 BulkActionGroup::make([
@@ -92,7 +111,7 @@ class LicenseResource extends Resource
         return [
             'index' => ListLicenses::route('/'),
             'create' => CreateLicense::route('/create'),
-            'edit' => EditLicense::route('/{record}/edit'),
+            'view' => ViewLicense::route('/{record}'),
         ];
     }
 }
