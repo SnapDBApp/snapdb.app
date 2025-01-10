@@ -15,7 +15,7 @@ class ValidPaddleSignature
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (! $request->hasHeader('paddle-signature')) {
+        if (! $request->hasHeader('Paddle-Signature')) {
             return response('Unauthorized (no signature)', 401);
         }
 
