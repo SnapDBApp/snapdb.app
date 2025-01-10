@@ -20,8 +20,6 @@ class License extends Model
 
     /**
      * Sets a new license key and returns it.
-     *
-     * @return string
      */
     public function generateAndSaveKey(): string
     {

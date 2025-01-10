@@ -6,9 +6,7 @@ use App\Mail\LicenseCreated;
 use App\Models\License;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Str;
 
 class RegenerateLicenseAction extends Action
 {
@@ -23,10 +21,10 @@ class RegenerateLicenseAction extends Action
     /**
      * Generate a new license key and send it to the license holder.
      *
-     * @param License $license
      * @return void
      */
-    private static function regenerate(License $license) {
+    private static function regenerate(License $license)
+    {
         $newLicenseKey = $license->generateAndSaveKey();
 
         // Send the license

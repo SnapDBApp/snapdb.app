@@ -2,12 +2,10 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Actions\RegenerateLicenseAction;
 use App\Filament\Resources\LicenseResource\Pages\CreateLicense;
-use App\Filament\Resources\LicenseResource\Pages\ViewLicense;
 use App\Filament\Resources\LicenseResource\Pages\ListLicenses;
+use App\Filament\Resources\LicenseResource\Pages\ViewLicense;
 use App\Models\License;
-use Filament\Forms\Components\Card;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
@@ -15,12 +13,10 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\DeleteBulkAction;
-use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Support\Facades\Hash;
 
 class LicenseResource extends Resource
 {
@@ -47,7 +43,7 @@ class LicenseResource extends Resource
                             ->hint('First part of the license key.')
                             ->formatStateUsing(function (License $record) {
                                 return $record->key_first_part . '*****';
-                            })
+                            }),
                     ]),
 
                 Section::make('Paddle')
@@ -58,7 +54,7 @@ class LicenseResource extends Resource
 
                         TextInput::make('paddle_transaction_id')
                             ->label('Transaction ID (Paddle)'),
-                    ])
+                    ]),
             ]);
     }
 

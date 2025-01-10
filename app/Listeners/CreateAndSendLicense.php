@@ -7,9 +7,7 @@ use App\Facades\Paddle;
 use App\Mail\LicenseCreated;
 use App\Models\License;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Str;
 
 class CreateAndSendLicense implements ShouldQueue
 {
