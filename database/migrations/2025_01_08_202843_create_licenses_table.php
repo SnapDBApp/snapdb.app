@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('licenses', function (Blueprint $table) {
             $table->id();
             $table->string('origin');
+            $table->integer('max_devices')->default(1);
             $table->string('key')->nullable();
             $table->string('key_first_part')->nullable();
             $table->string('email');

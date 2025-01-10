@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API;
+use App\Http\Middleware\ValidLicenseClient;
 use App\Http\Middleware\ValidPaddleIPAddress;
 use App\Http\Middleware\ValidPaddleSignature;
 use Illuminate\Support\Facades\Route;
@@ -19,8 +20,7 @@ Route::group([
 // Route group for License endpoints
 Route::group([
     'prefix' => '/license',
-    'middleware' => [ValidPaddleIPAddress::class],
+    'middleware' => [ValidLicenseClient::class],
 ], function () {
-    Route::get('/', fn () => 'Paddle!');
-    Route::post('/', API\PaddleWebhookController::class);
+    Route::post('validate', [API\LicenseController::class, 'validate']);
 });

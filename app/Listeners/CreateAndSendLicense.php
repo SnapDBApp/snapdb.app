@@ -27,6 +27,7 @@ class CreateAndSendLicense implements ShouldQueue
             'email' => $customerEmail,
             'origin' => LicenseOrigin::paddle,
             'expires_at' => null,
+            'max_devices' => 2,
             'paddle_customer_id' => $customerID,
             'paddle_transaction_id' => $event->payload['data']['id'],
         ]);
