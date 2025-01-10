@@ -18,7 +18,7 @@ class PaddleWebhookRequest extends FormRequest
             'event_type' => ['required', 'string'],
             'occurred_at' => ['required', 'string'],
             'notification_id' => ['required', 'string'],
-            'data' => ['required', 'array'],
+            'data' => ['present', 'array'],
         ];
     }
 }

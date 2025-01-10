@@ -17,10 +17,16 @@ class PaddleWebhookController extends Controller
         $payload = $request->all();
         Log::channel('paddle')->info('Paddle webhook received', ['payload' => $payload]);
 
-        match ($request->event_type) {
-            'transaction.completed' => TransactionCompleted::dispatch($payload)
-        };
+        // Dispatch event based on event type
+        switch ($request->event_type) {
+            case 'transaction.completed':
+                TransactionCompleted::dispatch($payload);
+                break;
 
-        return 'ok';
+            default:
+                return response('Unsupported event ' . $request->event_type, 400);
+        }
+
+        return response('OK', 200);
     }
 }
