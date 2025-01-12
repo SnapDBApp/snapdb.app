@@ -70,8 +70,6 @@ it('cannot remove an unrelated device', function () {
     $otherDevice = Device::factory()->create();
     session()->put('managing_license_id', $license->id);
 
-    expect($license->devices()->count())->toBe(1);
-
     $this->post('manage-license/remove-device', ['id' => $otherDevice->id])
-        ->assertRedirect();
+        ->assertNotFound();
 });
