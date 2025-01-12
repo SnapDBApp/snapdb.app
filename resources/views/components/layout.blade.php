@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>SnapDB • Dependency-free database management for productive (and lazy) people.</title>
+    <meta name="description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
+
+    <meta property="og:title" content="SnapDB - The Best macOS Database Management App">
+    <meta property="og:description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
+    <meta property="og:image" content="TBD"> {{--  TODO: ADD IT--}}
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta property="og:type" content="website">
+
+    <meta name="theme-color" content="#FF9701">
+
 
     {{-- Favicons --}}
     <link rel="icon" type="image/png" href="{{ asset('img/favicon/favicon-96x96.png') }}" sizes="96x96" />
