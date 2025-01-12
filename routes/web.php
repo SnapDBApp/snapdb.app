@@ -11,12 +11,12 @@ Route::group([
     Route::get('/', [ManageLicenseController::class, 'index'])
         ->name('manage-license');
 
-    Route::post('/login', [ManageLicenseController::class, 'login'])
+    Route::post('login', [ManageLicenseController::class, 'login'])
         ->name('manage-license.login');
 
-    Route::post('/logout', [ManageLicenseController::class, 'logout'])
+    Route::post('logout', [ManageLicenseController::class, 'logout'])
         ->name('manage-license.logout');
 
-    Route::post('/remove-device', [ManageLicenseController::class, 'removeDevice'])
+    Route::post('remove-device', [ManageLicenseController::class, 'removeDevice'])
         ->name('manage-license.remove-device');
 });
