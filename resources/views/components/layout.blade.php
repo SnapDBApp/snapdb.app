@@ -6,12 +6,19 @@
 
     <title>SnapDB{{ isset($title) ? ' • ' . $title : '' }}</title>
 
-    <!-- Fonts -->
+    {{-- Favicons --}}
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon/favicon-96x96.png') }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ asset('img/favicon/favicon.svg') }}" />
+    <link rel="shortcut icon" href="{{ asset('img/favicon/favicon.ico') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon/apple-touch-icon.png') }}" />
+    <link rel="manifest" href="{{ asset('img/favicon/site.webmanifest') }}" />
+
+    {{-- Fonts--}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <!-- Styles / Scripts -->
+    {{-- Styles / Scripts--}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
     <script type="text/javascript">
