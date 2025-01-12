@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Actions\GenerateLicenseAction;
 use App\Filament\Resources\LicenseResource\Pages\ListLicenses;
 use App\Filament\Resources\LicenseResource\Pages\ViewLicense;
+use App\Filament\Resources\LicenseResource\RelationManagers\DevicesRelationManager;
 use App\Models\License;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Section;
@@ -129,6 +130,13 @@ class LicenseResource extends Resource
     public static function canCreate(): bool
     {
         return false;
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            DevicesRelationManager::class,
+        ];
     }
 
     public static function getPages(): array

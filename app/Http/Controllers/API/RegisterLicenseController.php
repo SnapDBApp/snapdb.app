@@ -33,7 +33,7 @@ class RegisterLicenseController extends BaseLicenseController
         }
 
         // Make sure device max. is not reached
-        if ($license->devices->count() >= $license->max_devices) {
+        if ($license->devices_count >= $license->max_devices) {
             return response()->json([
                 'status' => 'max_devices_reached',
                 'message' => 'The maximum number of devices has been reached for this license.',

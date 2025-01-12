@@ -19,6 +19,8 @@ class License extends Model
         'key' => 'hashed',
     ];
 
+    protected $withCount = ['devices'];
+
     public function devices(): HasMany
     {
         return $this->hasMany(Device::class);

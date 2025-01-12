@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Device;
 use App\Models\License;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,12 @@ class LicenseSeeder extends Seeder
      */
     public function run(): void
     {
-        License::factory()->count(5)->create();
+        $licenses = License::factory()->count(5)->create();
+
+        $licenses->each(function (License $license) {
+            Device::factory()->count(rand(1, 3))->create([
+                'license_id' => $license->id,
+            ]);
+        });
     }
 }
