@@ -21,10 +21,15 @@
                         </p>
                     </h1>
                     <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-                        SnapDB manages databases for you, so you can focus on important stuff.
+                        SnapDB provides dependency-free database management for you, so you can focus on important stuff.
                     </p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <x-btn.primary>Get Started</x-btn.primary>
+                        <x-btn.primary x-data
+                        @click="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })"
+                        >
+                            Get Started
+                        </x-btn.primary>
+
                         <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
                     </div>
                 </div>
