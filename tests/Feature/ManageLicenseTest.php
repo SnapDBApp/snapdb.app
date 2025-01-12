@@ -29,6 +29,23 @@ it('can login', function () {
         ->assertSee($license->email);
 });
 
+it('rate limits login attempts', function () {
+    $maxPerMinute = 10;
+
+    for ($i = 0; $i < $maxPerMinute; $i++) {
+        $this->post('manage-license/login', [
+            'email' => 'test@example.com',
+            'key' => 'wrong-key',
+        ]);
+    }
+
+    $this->post('manage-license/login', [
+        'email' => 'test@example.com',
+        'key' => 'wrong-key',
+    ])
+        ->assertStatus(429);
+});
+
 it('can logout', function () {
     $license = License::factory()->create(['email' => 'test@example.com']);
     session()->put('managing_license_id', $license->id);

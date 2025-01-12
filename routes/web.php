@@ -12,7 +12,8 @@ Route::group([
         ->name('manage-license');
 
     Route::post('login', [ManageLicenseController::class, 'login'])
-        ->name('manage-license.login');
+        ->name('manage-license.login')
+        ->middleware('throttle:10,1'); // 10 requests per minute
 
     Route::post('logout', [ManageLicenseController::class, 'logout'])
         ->name('manage-license.logout');

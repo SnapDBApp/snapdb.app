@@ -20,8 +20,9 @@ Route::group([
 // Route group for License endpoints
 Route::group([
     'prefix' => '/license',
-    'middleware' => [ValidLicenseClient::class],
+    'middleware' => [ValidLicenseClient::class, 'throttle:license-api'],
 ], function () {
+    Route::get('/', fn () => 'License API');
     Route::post('register', API\RegisterLicenseController::class);
     Route::post('validate', API\ValidateLicenseController::class);
 });
