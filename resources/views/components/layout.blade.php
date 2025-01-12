@@ -2,16 +2,25 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="{{ str_replace('_', '-', app()->getLocale()) }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>SnapDB • Dependency-free database management for productive (and lazy) people.</title>
     <meta name="description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
+    <meta name="keywords" content="macOS database management, SnapDB app, dependency-free databases, Docker alternative, Homebrew-free DB management">
 
     <meta property="og:title" content="SnapDB - The Best macOS Database Management App">
     <meta property="og:description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
-    <meta property="og:image" content="TBD"> {{--  TODO: ADD IT--}}
+    <meta property="og:image" content="{{ asset('img/social-card.png') }}">
     <meta property="og:url" content="{{ url('/') }}">
     <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@SnapDBApp" />
+    <meta name="twitter:creator" content="@SnapDBApp" />
+    <meta name="twitter:image" content="{{ asset('img/social-card.png') }}" />
+    <meta name="twitter:title" content="Dependency and headache free database management ⭐️" />
+    <meta name="twitter:description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!" />
 
     <meta name="theme-color" content="#FF9701">
 
