@@ -32,7 +32,7 @@
             </div>
 
             <div class="hidden md:flex items-center space-x-8 text-gray-500">
-                <x-btn.secondary as="a" href="#">
+                <x-btn.secondary as="a" href="{{ route('manage-license') }}">
                     Manage License
                 </x-btn.secondary>
             </div>

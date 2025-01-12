@@ -67,7 +67,7 @@ class LicenseResource extends Resource
             ->columns([
                 IconColumn::make('Valid')
                     ->getStateUsing(function (License $record) {
-                        return $record->isValid();
+                        return ! $record->isExpired();
                     })
                     ->boolean(),
 

@@ -49,12 +49,4 @@ class License extends Model
 
         return $newLicenseKey;
     }
-
-    /**
-     * Whether the license is valid.
-     */
-    public function isValid(): bool
-    {
-        return $this->expires_at === null || $this->expires_at->isFuture();
-    }
 }
