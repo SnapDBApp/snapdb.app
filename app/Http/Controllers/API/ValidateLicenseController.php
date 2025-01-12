@@ -40,6 +40,8 @@ class ValidateLicenseController extends BaseLicenseController
             ], 401);
         }
 
+        $license->update(['last_seen_at' => now()]);
+
         // The license is valid
         return response()->json([
             'status' => 'valid',

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('key_first_part')->nullable();
             $table->string('email')->index();
             $table->timestamp('expires_at')->nullable();
+            $table->timestamp('last_seen_at')->nullable();
             $table->string('paddle_customer_id')->nullable();
             $table->string('paddle_transaction_id')->nullable();
             $table->timestamps();

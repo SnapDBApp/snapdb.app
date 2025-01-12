@@ -101,6 +101,12 @@ class LicenseResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
 
+                TextColumn::make('last_seen_at')
+                    ->label('Last Seen')
+                    ->since()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+
                 TextColumn::make('paddle_customer_id')
                     ->label('Customer ID (Paddle)')
                     ->sortable()

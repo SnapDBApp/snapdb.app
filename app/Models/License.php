@@ -16,6 +16,7 @@ class License extends Model
 
     protected $casts = [
         'expires_at' => 'datetime',
+        'last_seen_at' => 'datetime',
         'key' => 'hashed',
     ];
 

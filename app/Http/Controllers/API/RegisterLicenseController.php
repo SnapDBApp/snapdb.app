@@ -46,6 +46,8 @@ class RegisterLicenseController extends BaseLicenseController
             'device_id' => $request->deviceID,
         ]);
 
+        $license->update(['last_seen_at' => now()]);
+
         return response()->json([
             'status' => 'success',
             'message' => 'Device registered successfully.',
