@@ -80,5 +80,6 @@ it('registers a device for a license', function () {
 
     $response->assertSuccessful();
 
+    $license->refresh();
     expect($license->devices_count)->toBe(1);
 });
