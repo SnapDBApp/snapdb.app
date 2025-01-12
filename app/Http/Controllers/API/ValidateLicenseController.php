@@ -32,6 +32,14 @@ class ValidateLicenseController extends BaseLicenseController
             ], 410);
         }
 
+        // Check if the license is registered to the requesting device
+        if (! $license->devices()->where('device_id', $request->deviceID)->exists()) {
+            return response()->json([
+                'status' => 'unregistered_device',
+                'message' => 'The license is not registered to the requesting device.',
+            ], 401);
+        }
+
         // The license is valid
         return response()->json([
             'status' => 'valid',

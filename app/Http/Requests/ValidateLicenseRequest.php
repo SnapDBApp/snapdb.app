@@ -16,6 +16,7 @@ class ValidateLicenseRequest extends FormRequest
         return [
             'key' => ['required', 'string'],
             'email' => ['required', 'string', 'email'],
+            'deviceID' => ['required', 'string'],
         ];
     }
 }
