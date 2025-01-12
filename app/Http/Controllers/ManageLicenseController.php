@@ -41,7 +41,7 @@ class ManageLicenseController extends Controller
 
         $request->session()->put('managing_license_id', $license->id);
 
-        return back();
+        return redirect()->route('manage-license');
     }
 
     /**
