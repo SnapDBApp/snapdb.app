@@ -12,7 +12,29 @@
         '14-day money-back guarantee',
     ],
 ])
-<div class="relative isolate px-6 lg:px-8">
+<div
+    x-data="{
+        lifetimePrice: null,
+        fetchPrice() {
+            var request = {
+                items: [
+                    {
+                        quantity: 1,
+                        priceId: '{{ config('paddle.price_ids.lifetime') }}',
+                    }
+                ],
+                customerIpAddress: '{{ request()->ip() }}'
+            };
+
+            Paddle.PricePreview(request)
+                .then((result) => {
+                    this.lifetimePrice = result.data.details.lineItems[0].formattedTotals.total;
+                })
+        }
+    }"
+    x-init="fetchPrice"
+    class="relative isolate px-6 lg:px-8"
+>
     <div class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
         <div class="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr to-[#FFD353] from-[#FF9700] opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
@@ -61,7 +83,12 @@
                 Lifetime
             </h3>
             <p class="mt-4 flex items-baseline gap-x-2">
-                <span class="text-5xl font-semibold tracking-tight text-gray-900">$14,99</span>
+                <span class="text-5xl font-semibold tracking-tight text-gray-900">
+                    <span x-show="lifetimePrice == null">
+                        <x-tabler-loader-2 class="text-gray-600 animate-spin" />
+                    </span>
+                    <span x-show="lifetimePrice !== null" x-text="lifetimePrice"></span>
+                </span>
             </p>
             <p class="mt-6 text-base/7 text-gray-600">
                 Enjoy SnapDB without limits. Your license will be delivered to you immediately. Pay once and own it forever.
@@ -81,7 +108,7 @@
                 x-data="{
                                 paddleItems: [
                                     {
-                                        priceId: 'pri_01jgvkbfd9kcw7h80rwdp274qw',
+                                        priceId: '{{ config('paddle.price_ids.lifetime') }}',
                                         quantity: 1
                                     }
                                 ]
