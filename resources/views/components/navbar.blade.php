@@ -1,3 +1,27 @@
+@props([
+    'links' => [
+        [
+            'name' => 'Features',
+            'routeName' => 'landing',
+            'scrollID' => 'features',
+        ],
+        [
+            'name' => 'Pricing',
+            'routeName' => 'landing',
+            'scrollID' => 'pricing',
+        ],
+        [
+            'name' => 'FAQ',
+            'routeName' => 'landing',
+            'scrollID' => 'faq',
+        ],
+        [
+            'name' => 'Databases',
+            'routeName' => 'supported-databases',
+            'scrollID' => null,
+        ]
+    ]
+])
 <header
     x-data="{
         topOfPage: false,
@@ -25,13 +49,21 @@
                 </div>
             </div>
 
-            <div x-data class="hidden md:flex space-x-8 items-center text-sm text-gray-500">
-                <a class="cursor-pointer" @click="scrollTo('features')">Features</a>
-                <a class="cursor-pointer" @click="scrollTo('pricing')">Pricing</a>
-                <a class="cursor-pointer" @click="scrollTo('faq')">FAQ</a>
+            <div x-data class="hidden md:flex space-x-8 items-center text-sm">
+                @foreach ($links as $link)
+                    <a
+                        class="cursor-pointer text-gray-500 hover:text-gray-600"
+                        @click="mobileMenuOpen = false; scrollTo('{{ $link['scrollID'] }}')"
+                        @if (!request()->routeIs($link['routeName']))
+                            href="{{ route($link['routeName']) }}"
+                        @endif
+                    >
+                        {{ $link['name'] }}
+                    </a>
+                @endforeach
             </div>
 
-            <div class="hidden md:flex items-center space-x-8 text-gray-500">
+            <div class="items-center text-gray-500">
                 <x-btn.secondary as="a" href="{{ route('manage-license') }}">
                     Manage License
                 </x-btn.secondary>
@@ -48,16 +80,17 @@
                             <x-tabler-x class="text-gray-500 size-6" />
                         </div>
                         <div class="flex flex-col space-y-4">
-                            <a class="cursor-pointer" @click="mobileMenuOpen = false; scrollTo('features')">Features</a>
-                            <a class="cursor-pointer" @click="mobileMenuOpen = false; scrollTo('pricing')">Pricing</a>
-                            <a class="cursor-pointer" @click="mobileMenuOpen = false; scrollTo('faq')">FAQ</a>
-
-                            <div class="flex items-center space-x-4 pt-4">
-                                <a href="/register" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap group disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none h-10 text-sm rounded-lg px-4 inline-flex  bg-white hover:bg-zinc-50 dark:bg-gray-800 dark:hover:bg-zinc-700/50 text-gray-500 dark:text-gray-200 border border-zinc-200 hover:border-zinc-200 border-b-zinc-300/80 dark:border-zinc-700 dark:hover:border-zinc-700 shadow-sm [[data-flux-button-group]_&amp;]:border-l-0 [:is([data-flux-button-group]>&amp;:first-child,_[data-flux-button-group]_:first-child>&amp;)]:border-l-[1px]  bg-white" data-flux-button="data-flux-button" data-flux-group-target="data-flux-group-target">
-                                    Sign up
+                            @foreach ($links as $link)
+                                <a
+                                    class="cursor-pointer text-gray-500 hover:text-gray-600"
+                                    @click="mobileMenuOpen = false; scrollTo('{{ $link['scrollID'] }}')"
+                                    @if (!request()->routeIs($link['routeName']))
+                                        href="{{ route($link['routeName']) }}"
+                                    @endif
+                                >
+                                    {{ $link['name'] }}
                                 </a>
-                                <a href="/login" class="text-sm">Sign in</a>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
