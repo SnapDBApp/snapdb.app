@@ -22,22 +22,20 @@
             <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <div>
-                        <h3 class="text-sm/6 font-semibold text-gray-900">Solutions</h3>
+                        <h3 class="text-sm/6 font-semibold text-gray-900">Supported Databases</h3>
                         <ul role="list" class="mt-6 space-y-4">
+                            @foreach (config('supported-databases') as $supportedDatabase)
+                                <li>
+                                    <a href="{{ route('supported-databases.show', ['slug' => $supportedDatabase['slug']]) }}" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                                        {{ $supportedDatabase['name'] }}
+                                    </a>
+                                </li>
+                            @endforeach
+
                             <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Marketing</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Analytics</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Automation</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Commerce</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Insights</a>
+                                <a href="{{ route('supported-databases') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                                    See All Databases
+                                </a>
                             </li>
                         </ul>
                     </div>

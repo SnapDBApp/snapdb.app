@@ -1,9 +1,20 @@
 <?php
 
 use App\Http\Controllers\ManageLicenseController;
+use App\Http\Controllers\SupportedDatabaseController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'landing')->name('landing');
+
+Route::group([
+    'prefix' => 'databases',
+], function () {
+    Route::get('/', [SupportedDatabaseController::class, 'index'])
+        ->name('supported-databases');
+
+    Route::get('{slug}', [SupportedDatabaseController::class, 'show'])
+        ->name('supported-databases.show');
+});
 
 Route::group([
     'prefix' => 'manage-license',
