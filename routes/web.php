@@ -5,6 +5,8 @@ use App\Http\Controllers\SupportedDatabaseController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'landing')->name('landing');
+Route::view('terms', 'terms-conditions')->name('terms-conditions');
+Route::view('returns', 'returns-policy')->name('returns-policy');
 
 Route::group([
     'prefix' => 'databases',

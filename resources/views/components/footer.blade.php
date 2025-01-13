@@ -76,13 +76,13 @@
                         <h3 class="text-sm/6 font-semibold text-gray-900">Legal</h3>
                         <ul role="list" class="mt-6 space-y-4">
                             <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Terms of service</a>
+                                <a href="{{ route('terms-conditions') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">Terms and conditions</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('returns-policy') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">Returns policy</a>
                             </li>
                             <li>
                                 <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Privacy policy</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">License</a>
                             </li>
                         </ul>
                     </div>
