@@ -13,6 +13,10 @@
     font-optical-sizing: auto;
 }
 
+.link {
+    @apply text-blue-500 hover:underline;
+}
+
 .snapdb-underline {
     @apply underline decoration-snapdb-500;
 }

@@ -7,9 +7,29 @@
 
             <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
                 <x-landing.faq-item>
-                    <x-slot:question>What's the best thing about Switzerland?</x-slot>
+                    <x-slot:question>Which databases and versions does SnapDB support?</x-slot>
                     <x-slot:answer>
-                        I don't know, but the flag is a big plus.
+                        SnapDB supports a total of {{ round(collect(config('supported-databases'))->pluck('versions')->flatten()->count()) }} of your favorite database versions. This includes MySQL, MariaDB, and more.
+                        <a href="{{ route('supported-databases') }}" class="link">Check out the full list</a>.
+                    </x-slot:answer>
+                </x-landing.faq-item>
+
+                <x-landing.faq-item>
+                    <x-slot:question>Do I need other software or libraries to use SnapDB?</x-slot>
+                    <x-slot:answer>
+                        No, SnapDB is a fully standalone solution. You don't need to install any additional software or libraries to manage databases SnapDB. Just download and start managing your databases.
+
+                        <span class="block text-red-700">
+                            <x-tabler-x class="size-4 inline" /> No Homebrew, Docker, Vagrant, or other dependencies required.
+                        </span>
+                    </x-slot:answer>
+                </x-landing.faq-item>
+
+                <x-landing.faq-item>
+                    <x-slot:question>Can I use my license on multiple devices?</x-slot>
+                    <x-slot:answer>
+                        This depends on the type of license you have. If you have a multi-user license, you can use it on multiple devices simultaneously. You can
+                        <a href="{{ route('manage-license') }}" class="link">sign in with your license</a> to see how many devices you can use it on.
                     </x-slot:answer>
                 </x-landing.faq-item>
             </dl>
