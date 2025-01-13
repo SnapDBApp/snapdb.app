@@ -42,7 +42,10 @@
                         </ol>
                     </nav>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-10 my-20">
+                        <div class="flex items-center">
+                            <img src="{{ asset('img/db/' . $database['slug'] . '.png') }}" alt="{{ $database['name'] }} logo" class="mx-auto size-40">
+                        </div>
                         <div class="flex items-center">
                             <div>
                                 <h1 class="font-bold text-2xl font-biggo">Dependency-free <span class="snapdb-underline underline-thick">{{ $database['name'] }}</span> management with SnapDB</h1>
@@ -50,9 +53,6 @@
                                     SnapDB allows you to manage your local {{ $database['name'] }} databases without the need for any additional dependencies. Our tool supports {{ count($database['versions']) }} {{ $database['name'] }} versions that you can use without Homebrew, Docker, Vagrant, or any other virtualization software on macOS.
                                 </p>
                             </div>
-                        </div>
-                        <div class="flex items-center">
-                            <img src="{{ asset('img/db/' . $database['slug'] . '.png') }}" alt="{{ $database['name'] }} logo" class="mx-auto size-40">
                         </div>
                     </div>
 
