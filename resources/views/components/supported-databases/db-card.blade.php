@@ -1,7 +1,8 @@
 @props(['supportedDatabase'])
 
-<a href="{{ route('supported-databases.show', ['slug' => $supportedDatabase['slug']]) }}"
-   class="text-sm/6 text-gray-700 hover:text-gray-900 bg-white hover:bg-gray-50 shadow-md border rounded-lg p-6 flex gap-4"
+<x-card as="a"
+        href="{{ route('supported-databases.show', ['slug' => $supportedDatabase['slug']]) }}"
+        class="hover:text-gray-900 hover:bg-gray-50 flex gap-4"
 >
     <img src="{{ asset('img/db/' . $supportedDatabase['slug'] . '.png') }}" alt="{{ $supportedDatabase['name'] }} logo" class="size-16">
 
@@ -13,4 +14,4 @@
             {{ count($supportedDatabase['versions']) }} versions
         </span>
     </div>
-</a>
+</x-card>

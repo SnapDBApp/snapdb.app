@@ -2,7 +2,9 @@
 
 namespace App\Clients;
 
+use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Http\Client\PendingRequest;
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Http;
 
 class PaddleClient
@@ -16,6 +18,14 @@ class PaddleClient
             ->withHeader('Authorization', 'Bearer ' . config('paddle.api_key'));
     }
 
+    /**
+     * Retrieves the Paddle customer with the given ID.
+     *
+     * @param string $id
+     * @return array|mixed
+     * @throws ConnectionException
+     * @throws RequestException
+     */
     public function getCustomer(string $id)
     {
         return $this->http->get('/customers/' . $id)->throw()->json();

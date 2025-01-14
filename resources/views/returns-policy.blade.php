@@ -3,7 +3,6 @@
         <x-navbar />
     </x-container>
 
-    {{-- Templated from https://ploi.io/terms-of-service --}}
     <x-article>
         <x-slot:title>Returns <span class="snapdb-underline underline-thick">Policy</span></x-slot:title>
         <x-slot:meta>Last updated Jan 13, 2025.</x-slot:meta>

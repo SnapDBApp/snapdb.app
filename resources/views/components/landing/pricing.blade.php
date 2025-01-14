@@ -71,6 +71,7 @@
             </ul>
             <x-btn.primary-hollow
                 as="a"
+                href="{{ route('downloads') }}"
                 class="mt-4 w-full"
             >
                 Try it out

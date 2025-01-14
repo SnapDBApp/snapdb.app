@@ -16,8 +16,8 @@
             'scrollID' => 'faq',
         ],
         [
-            'name' => 'Databases',
-            'routeName' => 'supported-databases',
+            'name' => 'Downloads',
+            'routeName' => 'downloads',
             'scrollID' => null,
         ]
     ]

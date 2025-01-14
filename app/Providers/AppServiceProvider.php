@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Clients\GitHubClient;
 use App\Clients\PaddleClient;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
@@ -17,6 +18,10 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind('paddle', function () {
             return new PaddleClient;
+        });
+
+        $this->app->bind('github', function () {
+            return new GitHubClient;
         });
     }
 

@@ -61,7 +61,7 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
                             @foreach ($database['versions'] as $version)
-                                <div class="border rounded-md flex p-4 gap-4 bg-white shadow-md">
+                                <x-card class="flex gap-4">
                                     <x-tabler-database-smile class="size-10 text-gray-300" />
 
                                     <div class="flex-1">
@@ -70,7 +70,7 @@
                                             <span><x-tabler-check class="size-4 text-green-700 inline" /> Supported</span>
                                         </p>
                                     </div>
-                                </div>
+                                </x-card>
                             @endforeach
                         </div>
                     </div>
