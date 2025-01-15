@@ -9,6 +9,7 @@
     <title>{{ is_string($title) ? $title . ' • ' : '' }}SnapDB • Dependency-free database management for productive (and lazy) people.</title>
     <meta name="description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
     <meta name="keywords" content="macOS database management, SnapDB app, dependency-free databases, Docker alternative, Homebrew-free DB management">
+    <link rel="canonical" href="{{ url()->current() }}">
 
     <meta property="og:title" content="SnapDB - The Best macOS Database Management App">
     <meta property="og:description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
