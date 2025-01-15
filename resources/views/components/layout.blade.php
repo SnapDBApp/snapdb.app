@@ -23,9 +23,6 @@
     <meta name="twitter:title" content="Dependency and headache free database management ⭐️" />
     <meta name="twitter:description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!" />
 
-    <meta name="theme-color" content="#FF9701">
-
-
     {{-- Favicons --}}
     <link rel="icon" type="image/png" href="{{ asset('img/favicon/favicon-96x96.png') }}" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="{{ asset('img/favicon/favicon.svg') }}" />
