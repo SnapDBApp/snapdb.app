@@ -25,7 +25,7 @@ class ContactController extends Controller
      */
     public function sendMessage(SendContactMessageRequest $request)
     {
-        Mail::to('info@snapdb.app')->queue(
+        Mail::to(config('app.contact_mail'))->queue(
             new ContactMessageReceived(
                 name: $request->get('name'),
                 company: $request->get('company'),
