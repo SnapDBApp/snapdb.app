@@ -21,8 +21,8 @@ class PaddleClient
     /**
      * Retrieves the Paddle customer with the given ID.
      *
-     * @param string $id
      * @return array|mixed
+     *
      * @throws ConnectionException
      * @throws RequestException
      */

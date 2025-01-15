@@ -7,14 +7,23 @@
         <x-slot:title>SnapDB <span class="snapdb-underline underline-thick">Downloads</span></x-slot:title>
         <x-slot:body>
             <div id="releases" class="flex flex-col gap-4">
-                @foreach($releases as $i => $release)
-                    <x-card id="release-{{ $release['tag_name'] }}">
+                @foreach ($releases as $i => $release)
+                    @php($isLatest = $i === 0)
+                    <x-card
+                        id="release-{{ $release['tag_name'] }}"
+                        @class([
+                            'transition' => true,
+                            'opacity-50 hover:opacity-100' => !$isLatest,
+                        ])
+                    >
                         <div class="flex gap-2">
                             <h1 class="text-xl flex-1">
                                 {{ $release['name'] }}
 
-                                @if($i === 0)
-                                    <span class="border">Latest</span>
+                                @if ($isLatest)
+                                    <x-tag.green>Latest</x-tag.green>
+                                @else
+                                    <x-tag.red>Outdated</x-tag.red>
                                 @endif
                             </h1>
                             <span>{{ Carbon\Carbon::parse($release['published_at'])->format('Y-m-d H:i') }}</span>
