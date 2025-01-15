@@ -156,7 +156,7 @@
             <section class="flex flex-col gap-4 mb-4">
                 <h2 class="text-xl font-bold">Contact Us</h2>
                 <p>
-                    In order to resolve a complaint regarding SnapDB or to receive further information regarding use of the Site, please get in touch on our contact page.
+                    In order to resolve a complaint regarding SnapDB or to receive further information regarding use of the Site, please get in touch on our <a href="{{ route('contact') }}" class="link">contact page</a>.
                 </p>
             </section>
         </x-slot:body>

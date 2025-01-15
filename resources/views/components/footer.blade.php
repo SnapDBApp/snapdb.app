@@ -46,10 +46,7 @@
                                 <a href="{{ route('downloads') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">Downloads</a>
                             </li>
                             <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Documentation</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Guides</a>
+                                <a href="{{ route('manage-license') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">Manage license</a>
                             </li>
                         </ul>
                     </div>
@@ -85,7 +82,7 @@
                                 <a href="{{ route('returns-policy') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">Returns policy</a>
                             </li>
                             <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Privacy policy</a>
+                                <a href="{{ route('privacy-policy') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">Privacy policy</a>
                             </li>
                         </ul>
                     </div>
