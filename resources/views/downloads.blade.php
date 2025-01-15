@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Downloads">
     <x-container>
         <x-navbar />
     </x-container>

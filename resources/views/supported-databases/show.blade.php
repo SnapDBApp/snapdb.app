@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="{{ $database['name'] }}">
     <x-container>
         <x-navbar />
     </x-container>

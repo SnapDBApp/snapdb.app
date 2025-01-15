@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Manage License">
     <x-container>
         <x-navbar />
     </x-container>

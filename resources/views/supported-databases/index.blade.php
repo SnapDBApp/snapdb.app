@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Supported Databases">
     <x-container>
         <x-navbar />
     </x-container>

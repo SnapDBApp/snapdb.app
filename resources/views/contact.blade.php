@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Contact Support">
     <x-container>
         <x-navbar />
     </x-container>

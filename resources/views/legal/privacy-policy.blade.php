@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Privacy Policy">
     <x-container>
         <x-navbar />
     </x-container>

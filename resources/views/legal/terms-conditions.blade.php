@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Terms and Conditions">
     <x-container>
         <x-navbar />
     </x-container>

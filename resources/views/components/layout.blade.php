@@ -1,3 +1,4 @@
+@props(['title' => null])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="Content-Language" content="{{ str_replace('_', '-', app()->getLocale()) }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SnapDB • Dependency-free database management for productive (and lazy) people.</title>
+    <title>{{ is_string($title) ? $title . ' • ' : '' }}SnapDB • Dependency-free database management for productive (and lazy) people.</title>
     <meta name="description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
     <meta name="keywords" content="macOS database management, SnapDB app, dependency-free databases, Docker alternative, Homebrew-free DB management">
 

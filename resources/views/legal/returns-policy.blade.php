@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Returns and Refunds">
     <x-container>
         <x-navbar />
     </x-container>
