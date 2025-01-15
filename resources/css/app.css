@@ -1,4 +1,8 @@
 @import "markdown.css";
+.markdown-body ul {
+    @apply list-disc;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
