@@ -59,13 +59,19 @@
                         <h3 class="text-sm/6 font-semibold text-gray-900">Support</h3>
                         <ul role="list" class="mt-6 space-y-4">
                             <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Submit ticket</a>
+                                <a href="https://github.com/SnapDBApp/issues" target="_blank" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                                    Report a bug <x-tabler-external-link class="size-4 inline" />
+                                </a>
                             </li>
                             <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Documentation</a>
+                                <a href="https://github.com/SnapDBApp/issues" target="_blank" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                                    Request a feature <x-tabler-external-link class="size-4 inline" />
+                                </a>
                             </li>
                             <li>
-                                <a href="#" class="text-sm/6 text-gray-600 hover:text-gray-900">Guides</a>
+                                <a href="{{ route('contact') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                                    Contact us
+                                </a>
                             </li>
                         </ul>
                     </div>
