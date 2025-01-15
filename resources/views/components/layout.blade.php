@@ -51,7 +51,7 @@
         });
     </script>
 </head>
-    <body class="font-sans antialiased bg-gray-50 dark:bg-black dark:text-white/50">
+    <body class="font-sans antialiased bg-gray-50">
     {{ $slot }}
 
     <x-footer />
