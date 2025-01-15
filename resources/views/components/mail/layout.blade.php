@@ -114,7 +114,7 @@
                         <tr>
                             <td class="content-block" style="font-family: Helvetica, sans-serif; vertical-align: top; color: #9a9ea6; font-size: 16px; text-align: center;" valign="top" align="center">
                                 <span class="apple-link" style="color: #9a9ea6; font-size: 16px; text-align: center;">Delivered to you by SnapDB</span>
-                                <br> Questions or issues? <a href="{{ route('landing') }}" style="text-decoration: underline; color: #9a9ea6; font-size: 16px; text-align: center;">Reach out</a>.
+                                <br> Questions or issues? <a href="{{ route('contact') }}" style="text-decoration: underline; color: #9a9ea6; font-size: 16px; text-align: center;">Reach out</a>.
                             </td>
                         </tr>
                     </table>

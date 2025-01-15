@@ -7,6 +7,14 @@
         <x-slot:title>Contact SnapDB <span class="snapdb-underline underline-thick">Support</span></x-slot:title>
         <x-slot:meta>Questions, remarks, compliment or complaints.</x-slot:meta>
         <x-slot:body>
+            @session('success')
+                <x-alert.success>{{ session('success') }}</x-alert.success>
+            @endsession
+
+            @if ($errors->any())
+                <x-alert.error>{{ $errors->first() }}</x-alert.error>
+            @endif
+
             <div x-data="{
                 module: null,
                 topicId: null,
@@ -19,13 +27,19 @@
                     { id: 6, title: 'Something Else', module: 'contact' }
                 ],
                 selectTopic(id, module) {
+                    if(this.module == module && this.topicId == id) {
+                        this.module = null;
+                        this.topicId = null;
+                        return;
+                    }
+
                     this.module = module;
                     this.topicId = id;
                     document.getElementById('module-anchor').scrollIntoView({ behavior: 'smooth' })
                 }
             }">
                 {{-- Topic Selection --}}
-                <section class="flex flex-col gap-4 mb-10">
+                <section class="flex flex-col gap-4">
                     <h2 class="text-xl font-bold" id="module-anchor">How can we help you?</h2>
 
                     <div class="grid grid-cols-2 gap-4 text-center select-none">
@@ -41,6 +55,11 @@
                         </template>
                     </div>
                 </section>
+
+                {{-- Vertical dotted line --}}
+                <div class="h-[100px] w-1 my-2 border-l-4 border-dotted mx-auto block"
+                     x-show="module !== null" x-transition.opacity
+                ></div>
 
                 {{-- Contact module --}}
                 <section x-show="module == 'contact'" x-transition.opacity class="flex flex-col gap-4 mb-4">
@@ -65,12 +84,12 @@
                                 </div>
                                 <div class="sm:col-span-2">
                                     <x-form.label for="message" :required="true">Message</x-form.label>
-                                    <x-form.textarea name="message" rows="4" id="message" required />
+                                    <x-form.textarea maxlength="1000" name="message" rows="4" id="message" required />
                                 </div>
                                 <div class="sm:col-span-2 flex gap-2">
                                     <div><x-form.checkbox id="agree_privacy" name="agree_privacy" required /></div>
                                     <x-form.label for="agree_privacy" class="flex-1" :required="true">
-                                        I agree to the <a href="{{ route('privacy-policy') }}" class="link">Privacy Policy</a>
+                                        I agree to the <a href="{{ route('privacy-policy') }}" target="_blank" class="link">Privacy Policy</a>
                                     </x-form.label>
                                 </div>
                             </div>

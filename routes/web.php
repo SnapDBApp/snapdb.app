@@ -11,7 +11,8 @@ Route::view('terms', 'terms-conditions')->name('terms-conditions');
 Route::view('returns', 'returns-policy')->name('returns-policy');
 Route::view('privacy', 'privacy-policy')->name('privacy-policy');
 Route::get('downloads', DownloadController::class)->name('downloads');
-Route::get('contact', ContactController::class)->name('contact');
+Route::get('contact', [ContactController::class, 'index'])->name('contact');
+Route::post('contact', [ContactController::class, 'sendMessage']);
 
 Route::group([
     'prefix' => 'databases',
