@@ -6,6 +6,10 @@
     <x-article>
         <x-slot:title>SnapDB <span class="snapdb-underline underline-thick">Downloads</span></x-slot:title>
         <x-slot:body>
+            <p class="text-gray-500 mb-4 text-pretty">
+                Download the latest version of SnapDB below. SnapDB is a standalone database management tool for macOS. It supports MySQL, MariaDB, and more.
+            </p>
+
             <div id="releases" class="flex flex-col gap-4">
                 @foreach ($releases as $i => $release)
                     @php

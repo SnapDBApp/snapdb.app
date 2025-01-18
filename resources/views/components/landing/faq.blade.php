@@ -32,6 +32,13 @@
                         <a href="{{ route('manage-license') }}" class="link">sign in with your license</a> to see how many devices you can use it on.
                     </x-slot:answer>
                 </x-landing.faq-item>
+
+                <x-landing.faq-item>
+                    <x-slot:question>Which operating systems can I use SnapDB on?</x-slot>
+                    <x-slot:answer>
+                        SnapDB is currently exclusively available on macOS 14.6 and higher.
+                    </x-slot:answer>
+                </x-landing.faq-item>
             </dl>
         </div>
     </div>
