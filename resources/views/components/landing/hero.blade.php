@@ -30,7 +30,10 @@
                             Get Started
                         </x-btn.primary>
 
-                        <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+                        <a
+                            x-data
+                            @click="document.getElementById('features').scrollIntoView({ behavior: 'smooth' })"
+                            class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
                     </div>
                 </div>
 

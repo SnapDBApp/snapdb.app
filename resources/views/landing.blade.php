@@ -18,7 +18,7 @@
                 <p>It is really that easy.</p>
             </div>
             <div class="block pl-8 md:pl-0">
-                <video class="h-full lg:min-h-[300px] rounded-tl-lg shadow-md" autoplay loop playsInline muted src="{{ asset('video/spin-up-db.mp4') }}"></video>
+                <video class="md:h-full lg:min-h-[300px] rounded-tl-lg shadow-md" autoplay loop playsInline muted src="{{ asset('video/spin-up-db.mp4') }}"></video>
             </div>
         </x-landing.feature-card>
 
