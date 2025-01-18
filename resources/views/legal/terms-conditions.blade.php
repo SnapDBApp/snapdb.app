@@ -154,6 +154,40 @@
             </section>
 
             <section class="flex flex-col gap-4 mb-4">
+                <h2 class="text-xl font-bold">Service Dependency and Availability</h2>
+                <p>
+                    SnapDB requires a functional backend server for full operation. By using
+                    this application, you acknowledge and agree that the app's functionality is
+                    wholly or partially dependent on the availability and operation of our backend server.
+                </p>
+
+                <p>
+                    The term "lifetime" as used in our pricing plans refers to the operational
+                    lifetime of the service, not the lifetime of the user or any other entity.
+                    While we strive to maintain our backend services, we cannot guarantee their
+                    availability indefinitely.
+                </p>
+
+                <p>
+                    We reserve the right to discontinue the service at our sole discretion,
+                    with or without prior notice, due to reasons including but not limited to
+                    financial viability, technological constraints, or other unforeseen circumstances.
+                </p>
+
+                <p>
+                    By purchasing a plan, including a lifetime plan, you acknowledge and accept the
+                    risk of potential service discontinuation. No refunds, whether full or partial,
+                    will be issued in the event the service is terminated.
+                </p>
+
+                <p>
+                    To the fullest extent permitted by law, we are not liable for any losses,
+                    damages, or inconveniences arising from the unavailability or discontinuation
+                    of the SnapDB service.
+                </p>
+            </section>
+
+            <section class="flex flex-col gap-4 mb-4">
                 <h2 class="text-xl font-bold">Contact Us</h2>
                 <p>
                     In order to resolve a complaint regarding SnapDB or to receive further information regarding use of the Site, please get in touch on our <a href="{{ route('contact') }}" class="link">contact page</a>.
