@@ -130,7 +130,10 @@
                     Temporarily Unavailable
                 </x-btn.secondary>
             @endif
-            <p class="mt-2 text-xs/5 text-gray-600">Invoices and receipts available for easy company reimbursement</p>
+            <p class="mt-2 text-xs text-gray-500 text-center">
+                Invoices provided.
+                <a href="{{ route('terms-conditions') }}" class="link">Terms and conditions</a> apply.
+            </p>
         </div>
     </div>
 </div>
