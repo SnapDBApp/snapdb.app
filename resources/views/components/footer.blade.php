@@ -48,6 +48,11 @@
                             <li>
                                 <a href="{{ route('manage-license') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">Manage license</a>
                             </li>
+                            <li>
+                                <a href="https://stats.uptimerobot.com/vwXxZtpguH" target="_blank" class="text-sm/6 text-gray-600 hover:text-gray-900">
+                                    Service Status <x-tabler-external-link class="size-4 inline" />
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
