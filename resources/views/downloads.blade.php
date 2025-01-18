@@ -30,7 +30,7 @@
                                 @endif
                             </h1>
                             <div>
-                                @if($isLatest)
+                                @if ($isLatest)
                                     <x-btn.primary x-data
                                                    @click="window.location = '{{ $downloadURL }}'"
                                     >
@@ -41,7 +41,7 @@
                         </div>
 
                         <x-markdown class="markdown-body my-4">
-                            @if(empty($release['body']))
+                            @if (empty($release['body']))
                                 <span class="text-gray-500">No release notes provided.</span>
                             @else
                                 {{ $release['body'] }}

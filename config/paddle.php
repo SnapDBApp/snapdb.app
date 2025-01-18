@@ -4,6 +4,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Paddle accept purchases
+    |--------------------------------------------------------------------------
+    |
+    | Set to false to disable purchases on the website. This is useful for
+    | testing purposes or when you want to temporarily disable purchases.
+    |
+    */
+
+    'accept_purchases' => env('PADDLE_ACCEPT_PURCHASES', false),
+
+    /*
+    |--------------------------------------------------------------------------
     | Paddle API Base URL
     |--------------------------------------------------------------------------
     |

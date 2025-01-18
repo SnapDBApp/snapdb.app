@@ -11,6 +11,7 @@
         'Lifetime updates and support',
         '14-day money-back guarantee',
     ],
+    'enabled' => config('paddle.accept_purchases') == true
 ])
 <div
     x-data="{
@@ -79,16 +80,21 @@
         </div>
 
         {{-- Premium lifetime tier --}}
-        <div class="relative rounded-3xl bg-white p-8 shadow-2xl ring-1 ring-gray-900/10 sm:p-10">
+        <div @class([
+            'relative rounded-3xl bg-white p-8 shadow-2xl ring-1 ring-gray-900/10 sm:p-10' => true,
+            'opacity-50 pointer-events-none hover:cursor-not-allowed' => !$enabled
+        ])>
             <h3 class="text-base/7 font-semibold snapdb-underline underline-thick text-gray-700">
                 Lifetime
             </h3>
             <p class="mt-4 flex items-baseline gap-x-2">
                 <span class="text-5xl font-semibold tracking-tight text-gray-900">
+                    @if ($enabled)
                     <span x-show="lifetimePrice == null">
                         <x-tabler-loader-2 class="text-gray-600 animate-spin" />
                     </span>
                     <span x-show="lifetimePrice !== null" x-text="lifetimePrice"></span>
+                    @endif
                 </span>
             </p>
             <p class="mt-6 text-base/7 text-gray-600">
@@ -103,6 +109,7 @@
                 </li>
                 @endforeach
             </ul>
+            @if ($enabled)
             <x-btn.primary
                 as="a"
                 class="mt-4 w-full"
@@ -118,6 +125,11 @@
             >
                 Purchase
             </x-btn.primary>
+            @else
+                <x-btn.secondary id="btn-paddle-disabled" class="mt-4 w-full">
+                    Temporarily Unavailable
+                </x-btn.secondary>
+            @endif
             <p class="mt-2 text-xs/5 text-gray-600">Invoices and receipts available for easy company reimbursement</p>
         </div>
     </div>
