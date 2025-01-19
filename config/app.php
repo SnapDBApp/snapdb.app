@@ -134,4 +134,14 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Status Page URL
+    |--------------------------------------------------------------------------
+    |
+    | URL to the (external) service where the status page is hosted.
+    |
+    */
+
+    'status_page' => 'https://stats.uptimerobot.com/vwXxZtpguH',
 ];

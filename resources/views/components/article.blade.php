@@ -1,4 +1,4 @@
-<article class="isolate py-40 max-w-2xl mx-auto px-4">
+<article {{ $attributes->merge(['class' => 'isolate py-40 max-w-2xl mx-auto px-4']) }}>
     <h1 class="font-bold text-2xl font-biggo">
         {{ $title }}
     </h1>
