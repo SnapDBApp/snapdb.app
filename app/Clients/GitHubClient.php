@@ -19,7 +19,7 @@ class GitHubClient
 
     /**
      * Returns the releases for a given repository.
-     * Caches the result for a day.
+     * Caches the result for an hour.
      *
      * @return mixed
      */
@@ -27,7 +27,7 @@ class GitHubClient
     {
         $cacheKey = 'gh_releases_' . $repoPath;
 
-        return Cache::remember($cacheKey, now()->addDay(), function () use ($repoPath) {
+        return Cache::remember($cacheKey, now()->addHour(), function () use ($repoPath) {
             return $this->http->get('/repos/' . $repoPath . '/releases')->throw()->json();
         });
     }

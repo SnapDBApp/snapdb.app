@@ -1,9 +1,13 @@
 <?php
 
-it('shows custom 503 page', function () {
-    Artisan::call('down');
+beforeEach(function () {
+    Route::get('/503', function () {
+        abort(503);
+    });
+});
 
-    $this->get('/')
+it('shows custom 503 page', function () {
+    $this->get('/503')
         ->assertStatus(503)
         ->assertSee('SnapDB is currently unavailable')
         ->assertSeeHtml(config('app.contact_mail'))
