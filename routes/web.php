@@ -7,7 +7,7 @@ use App\Http\Controllers\SupportedDatabaseController;
 use Illuminate\Support\Facades\Route;
 
 // Cached routes
-Route::middleware('cache.headers:public;max_age=2628000;etag')->group(function () {
+Route::middleware('cache.headers:public;max_age=86400;etag')->group(function () {
     Route::view('/', 'landing')->name('landing');
     Route::view('terms', 'legal.terms-conditions')->name('terms-conditions');
     Route::view('returns', 'legal.returns-policy')->name('returns-policy');
