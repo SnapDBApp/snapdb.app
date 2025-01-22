@@ -4,14 +4,9 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\ManageLicenseController;
 use App\Http\Controllers\SupportedDatabaseController;
-use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\Facades\Route;
 
-// We disable CSRF protection for the landing page because it's a static page.
-// This allows the landing page to be cached by Cloudflare.
-Route::view('/', 'landing')->name('landing')
-    ->withoutMiddleware([VerifyCsrfToken::class]);
-
+Route::view('/', 'landing')->name('landing');
 Route::view('terms', 'legal.terms-conditions')->name('terms-conditions');
 Route::view('returns', 'legal.returns-policy')->name('returns-policy');
 Route::view('privacy', 'legal.privacy-policy')->name('privacy-policy');
