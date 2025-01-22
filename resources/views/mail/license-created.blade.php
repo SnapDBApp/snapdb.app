@@ -10,7 +10,7 @@
     <p><strong>License key:</strong></p>
     <x-mail.code-block>{{ $licenseKey }}</x-mail.code-block>
 
-    <x-mail.cta-btn href="{{ route('landing') }}">Download SnapDB</x-mail.cta-btn>
+    <x-mail.cta-btn href="{{ route('downloads') }}">Download SnapDB</x-mail.cta-btn>
 
     <p>Happy database-ing!</p>
 </x-mail.layout>
