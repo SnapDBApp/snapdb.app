@@ -29,7 +29,7 @@
 
             Paddle.PricePreview(request)
                 .then((result) => {
-                    this.lifetimePrice = result.data.details.lineItems[0].formattedTotals.total;
+                    this.lifetimePrice = result.data.details.lineItems[0].formattedTotals.subtotal;
                 })
         }
     }"
