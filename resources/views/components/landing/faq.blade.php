@@ -39,6 +39,13 @@
                         SnapDB is currently exclusively available on macOS 14.6 and higher.
                     </x-slot:answer>
                 </x-landing.faq-item>
+
+                <x-landing.faq-item>
+                    <x-slot:question>I have another question</x-slot>
+                    <x-slot:answer>
+                        You can always <a href="{{ route('contact') }}" class="link">contact us</a> if you have any other questions. We're happy to help!
+                    </x-slot:answer>
+                </x-landing.faq-item>
             </dl>
         </div>
     </div>

@@ -13,7 +13,10 @@ class ContactMessageReceived extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public function __construct(public string $name, public ?string $company, public string $email, public string $enteredMessage) {}
+    public function __construct(public string $name, public ?string $company, public string $email, public string $enteredMessage)
+    {
+        // ...
+    }
 
     /**
      * Get the message envelope.
