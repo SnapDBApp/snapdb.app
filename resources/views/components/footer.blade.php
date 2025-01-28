@@ -8,6 +8,8 @@
                     Simplifying database management for productive (and lazy) people.
                 </p>
 
+                <a class="inline-block" href="https://www.producthunt.com/posts/snapdb?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-snapdb" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=827946&theme=neutral&t=1738076026250" alt="SnapDB - Dependency&#0032;free&#0032;database&#0032;management&#0032;for&#0032;productive&#0032;people&#0046; | Product Hunt" style="width: 175px; height: 38px;" width="175" height="38" /></a>
+
                 <div class="flex gap-x-6">
                     <a href="https://x.com/SnapDBApp" class="text-gray-600 hover:text-gray-800">
                         <span class="sr-only">X</span>
