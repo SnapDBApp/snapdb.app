@@ -19,9 +19,9 @@
                 module: null,
                 topicId: null,
                 topics: [
-                    { id: 1, title: 'Ordering & Payments', module: 'contact' },
-                    { id: 2, title: 'Refunds & Returns', module: 'contact' },
-                    { id: 3, title: 'License Issues', module: 'contact' },
+                    { id: 1, title: 'License Not Received', module: 'no_license' },
+                    { id: 2, title: 'Ordering & Payments', module: 'contact' },
+                    { id: 3, title: 'Refunds & Returns', module: 'contact' },
                     { id: 4, title: 'Report a Bug', module: 'gh_issues' },
                     { id: 5, title: 'Request a Feature', module: 'gh_issues' },
                     { id: 6, title: 'Something Else', module: 'contact' }
@@ -119,6 +119,26 @@
                                     Open GitHub
                                     <x-tabler-external-link class="size-4 inline" />
                                 </x-btn.secondary>
+                            </div>
+                        </div>
+                    </x-card>
+                </section>
+
+                {{-- No license received module --}}
+                <section x-show="module == 'no_license'" x-transition.opacity class="flex flex-col gap-4 mb-4">
+                    <x-card>
+                        <h2 class="text-xl text-gray-500">Did you not receive your license after purchase?</h2>
+
+                        <div class="my-4 flex gap-2">
+                            <div class="px-4">
+                                <x-tabler-mail-x class="text-gray-500 size-12" />
+                            </div>
+                            <div class="flex-1">
+                                <p>
+                                    If you did not receive your license after purchase, please check your spam folder first.
+                                    <strong>Most customers still find their license key in their spam inbox.</strong>
+                                    If you still can't find it 30 minutes after purchase, please contact us and we will help resolve it.
+                                </p>
                             </div>
                         </div>
                     </x-card>
