@@ -92,6 +92,9 @@
                                         I agree to the <a href="{{ route('privacy-policy') }}" target="_blank" class="link">Privacy Policy</a>
                                     </x-form.label>
                                 </div>
+                                <div>
+                                    <x-turnstile-widget />
+                                </div>
                             </div>
                             <div class="mt-10">
                                 <x-btn.primary type="submit" class="w-full">Send</x-btn.primary>

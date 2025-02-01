@@ -39,6 +39,7 @@
     {{-- Styles / Scripts--}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script type="text/javascript">
         @if (! app()->isProduction())
         Paddle.Environment.set("sandbox");
