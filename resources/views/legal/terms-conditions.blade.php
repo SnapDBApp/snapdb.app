@@ -6,7 +6,7 @@
     {{-- Templated from https://ploi.io/terms-of-service --}}
     <x-article>
         <x-slot:title>Terms and <span class="snapdb-underline underline-thick">Conditions</span></x-slot:title>
-        <x-slot:meta>Last updated Jan 13, 2025.</x-slot:meta>
+        <x-slot:meta>Last updated Feb 1, 2025.</x-slot:meta>
         <x-slot:body>
             <section class="flex flex-col gap-4 mb-4">
                 <h2 class="text-xl font-bold">Agreement to Terms</h2>
@@ -184,6 +184,28 @@
                     To the fullest extent permitted by law, we are not liable for any losses,
                     damages, or inconveniences arising from the unavailability or discontinuation
                     of the SnapDB service.
+                </p>
+            </section>
+
+            <section class="flex flex-col gap-4 mb-4">
+                <h2 class="text-xl font-bold">Data Loss and/or Modification</h2>
+                <p>
+                    SnapDB is a database management tool that allows users to interact with their
+                    databases. By using this application, you acknowledge and agree that the app
+                    has the potential to modify or delete data in your databases.
+                </p>
+
+                <p>
+                    We are not responsible for any data loss or modification that may occur as a
+                    result of using SnapDB. It is your responsibility to ensure that you have
+                    appropriate backups and safeguards in place to protect your data.
+                </p>
+
+                <p>
+                    We recommend that you thoroughly test the application on non-production databases.
+                    It is advised to only use SnapDB in combination with databases that do not contain
+                    critical or sensitive data.
+                    By using SnapDB, you agree to assume all risks associated with data loss or modification.
                 </p>
             </section>
 
