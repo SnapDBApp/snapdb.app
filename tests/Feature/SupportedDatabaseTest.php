@@ -12,7 +12,7 @@ it('can see all databases on the page', function () {
 });
 
 it('can view a database detail page', function () {
-    $database = collect(config('supported-databases'))->first();
+    $database = collect(config('supported-databases'))->random();
 
     $response = $this->get('/databases/' . $database['slug'])
         ->assertOk()

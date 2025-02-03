@@ -10,6 +10,7 @@ it('can send a contact message with company', function () {
     Mail::fake();
 
     $this->post('/contact', [
+        'cf-turnstile-response' => 'this-is-a-test',
         'name' => 'John Doe',
         'company' => 'Acme Inc.',
         'email' => 'john.doe@example.com',
@@ -25,6 +26,7 @@ it('can send a contact message without company', function () {
     Mail::fake();
 
     $this->post('/contact', [
+        'cf-turnstile-response' => 'this-is-a-test',
         'name' => 'John Doe',
         'company' => '.',
         'email' => 'john.doe@example.com',
@@ -40,6 +42,7 @@ it('can send a contact message with long message', function () {
     Mail::fake();
 
     $this->post('/contact', [
+        'cf-turnstile-response' => 'this-is-a-test',
         'name' => 'John Doe',
         'company' => '.',
         'email' => 'john.doe@example.com',

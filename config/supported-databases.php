@@ -71,4 +71,19 @@ return [
             '7.4.1', '7.2.6',
         ],
     ],
+    'elasticsearch' => [
+        'slug' => 'elasticsearch',
+        'name' => 'Elasticsearch',
+        'description' => 'Elasticsearch is an open source distributed, RESTful search and analytics engine.',
+        'versions' => [
+            '8.17.1 • macOS 14 (ARM, 64-bit)', '8.17.1 • macOS 14 (x86, 64-bit)',
+            '8.16.3 • macOS 14 (ARM, 64-bit)', '8.16.3 • macOS 14 (x86, 64-bit)',
+            '8.15.5 • macOS 14 (ARM, 64-bit)', '8.15.5 • macOS 14 (x86, 64-bit)',
+            '8.14.3 • macOS 14 (ARM, 64-bit)', '8.14.3 • macOS 14 (x86, 64-bit)',
+            '8.13.4 • macOS 14 (ARM, 64-bit)', '8.13.4 • macOS 14 (x86, 64-bit)',
+            '8.0.1 • macOS 14 (ARM, 64-bit)', '8.0.1 • macOS 14 (x86, 64-bit)',
+            '7.17.27 • macOS 14 (ARM, 64-bit)', '7.17.27 • macOS 14 (x86, 64-bit)',
+            '7.17.4 • macOS 14 (ARM, 64-bit)', '7.17.4 • macOS 14 (x86, 64-bit)',
+        ],
+    ],
 ];
