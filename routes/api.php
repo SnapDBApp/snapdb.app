@@ -17,7 +17,7 @@ Route::group([
     Route::post('/', API\PaddleWebhookController::class);
 });
 
-// Route group for License endpoints
+// !!DEPRECATED!! Route group for License endpoints
 Route::group([
     'prefix' => '/license',
     'middleware' => [ValidLicenseClient::class, 'throttle:license-api'],

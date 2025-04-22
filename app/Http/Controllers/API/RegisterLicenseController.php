@@ -14,6 +14,10 @@ class RegisterLicenseController extends BaseLicenseController
      */
     public function __invoke(RegisterLicenseRequest $request)
     {
+        // As of version 1.1.2 Supabase is used for license stuff
+        // We will disable this endpoint from now on
+        abort(500, 'Please update to the latest version of SnapDB.');
+
         $license = $this->findLicenseFromRequest($request);
 
         // No license found with this combination
