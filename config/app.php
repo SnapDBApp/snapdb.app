@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => 'SnapDB',
 
     /*
     |--------------------------------------------------------------------------
@@ -52,18 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Contact Mail
-    |--------------------------------------------------------------------------
-    |
-    | The email address that is used to send contact messages to.
-    |
-    */
-
-    'contact_mail' => env('APP_CONTACT_MAIL', 'info@snapdb.app'),
+    'url' => env('APP_URL', 'https://snapdb.app'),
 
     /*
     |--------------------------------------------------------------------------
@@ -108,7 +97,7 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
-    'key' => env('APP_KEY'),
+    'key' => env('APP_KEY', 'base64:QBiUmpaY00C4g+oDk2GzJoNvW/5Y3uFKItKRxkJ9g2Q='),
 
     'previous_keys' => [
         ...array_filter(

@@ -12,9 +12,7 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        // todo: temporarily enabled http requests, because the
-        // turnstile package needs to make a request to cloudflare
-        //        Http::preventStrayRequests();
+        Http::preventStrayRequests();
         LogFake::bind();
     }
 }

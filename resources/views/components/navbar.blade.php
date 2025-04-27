@@ -64,9 +64,9 @@
             </div>
 
             <div class="items-center text-gray-500">
-                <x-btn.secondary as="a" href="{{ route('manage-license') }}">
-                    Manage License
-                </x-btn.secondary>
+{{--                <x-btn.secondary as="a" href="{{ route('manage-license') }}">--}}
+{{--                    Manage License--}}
+{{--                </x-btn.secondary>--}}
             </div>
 
             <div class="md:hidden flex items-center cursor-pointer" @click="mobileMenuOpen = true">

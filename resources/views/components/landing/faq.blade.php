@@ -28,8 +28,7 @@
                 <x-landing.faq-item>
                     <x-slot:question>Can I use my license on multiple devices?</x-slot>
                     <x-slot:answer>
-                        This depends on the type of license you have. If you have a multi-user license, you can use it on multiple devices simultaneously. You can
-                        <a href="{{ route('manage-license') }}" class="link">sign in with your license</a> to see how many devices you can use it on.
+                        This depends on the type of license you have. If you have a multi-user license, you can use it on multiple devices simultaneously.
                     </x-slot:answer>
                 </x-landing.faq-item>
 

@@ -47,9 +47,9 @@
                             <li>
                                 <a href="{{ route('downloads') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">Downloads</a>
                             </li>
-                            <li>
-                                <a href="{{ route('manage-license') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">Manage license</a>
-                            </li>
+{{--                            <li>--}}
+{{--                                <a href="{{ route('manage-license') }}" class="text-sm/6 text-gray-600 hover:text-gray-900">Manage license</a>--}}
+{{--                            </li>--}}
                             <li>
                                 <a href="{{ config('app.status_page') }}" target="_blank" class="text-sm/6 text-gray-600 hover:text-gray-900">
                                     Service Status <x-tabler-external-link class="size-4 inline" />

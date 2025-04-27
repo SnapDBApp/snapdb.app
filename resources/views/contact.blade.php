@@ -66,7 +66,7 @@
                     <x-card>
                         <h2 class="text-xl text-gray-500">Get in touch with us</h2>
 
-                        <form action="{{ route('contact') }}" method="POST" class="my-4">
+                        <form action="https://formsubmit.co/info@snapdb.app" method="POST" class="my-4">
                             @csrf
 
                             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -91,9 +91,6 @@
                                     <x-form.label for="agree_privacy" class="flex-1" :required="true">
                                         I agree to the <a href="{{ route('privacy-policy') }}" target="_blank" class="link">Privacy Policy</a>
                                     </x-form.label>
-                                </div>
-                                <div>
-                                    <x-turnstile-widget />
                                 </div>
                             </div>
                             <div class="mt-10">
