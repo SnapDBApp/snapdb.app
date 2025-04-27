@@ -5,10 +5,10 @@
     <meta http-equiv="Content-Language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Downloads • SnapDB • Dependency-free database management for productive (and lazy) people.</title>
+    <title>Contact Support • SnapDB • Dependency-free database management for productive (and lazy) people.</title>
     <meta name="description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
     <meta name="keywords" content="macOS database management, SnapDB app, dependency-free databases, Docker alternative, Homebrew-free DB management">
-    <link rel="canonical" href="https://snapdb.app/downloads">
+    <link rel="canonical" href="https://snapdb.app/contact">
 
     <meta property="og:title" content="SnapDB - The Best macOS Database Management App">
     <meta property="og:description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
@@ -37,7 +37,6 @@
 
     
     <link rel="preload" as="style" href="https://snapdb.app/build/assets/app-CjAlEvjy.css" /><link rel="modulepreload" href="https://snapdb.app/build/assets/app-Cy98PJ2n.js" /><link rel="stylesheet" href="https://snapdb.app/build/assets/app-CjAlEvjy.css" /><script type="module" src="https://snapdb.app/build/assets/app-Cy98PJ2n.js"></script>    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script type="text/javascript">
         Paddle.Initialize({
             token: 'live_d2e4212245ec1bc29127429a659'
@@ -100,6 +99,7 @@
                                     <a
                         class="cursor-pointer text-gray-500 hover:text-gray-600"
                         @click="mobileMenuOpen = false; scrollTo('')"
+                                                    href="https://snapdb.app/downloads"
                                             >
                         Downloads
                     </a>
@@ -175,6 +175,7 @@
                                                             <a
                                     class="cursor-pointer text-gray-500 hover:text-gray-600"
                                     @click="mobileMenuOpen = false; scrollTo('')"
+                                                                            href="https://snapdb.app/downloads"
                                                                     >
                                     Downloads
                                 </a>
@@ -189,38 +190,215 @@
 
     <article class="isolate py-40 max-w-2xl mx-auto px-4">
     <h1 class="font-bold text-2xl font-biggo">
-        SnapDB <span class="snapdb-underline underline-thick">Downloads</span>
+        Contact SnapDB <span class="snapdb-underline underline-thick">Support</span>
     </h1>
+        <p class="text-gray-400">Questions, remarks, compliment or complaints.</p>
     
     <p class="mt-4">
-        <p class="text-gray-500 mb-4 text-pretty">
-                Download the latest version of SnapDB below. SnapDB is a standalone database management tool for macOS. It supports MySQL, MariaDB, and more.
-            </p>
+        <div x-data="{
+                module: null,
+                topicId: null,
+                topics: [
+                    { id: 1, title: 'License Not Received', module: 'no_license' },
+                    { id: 2, title: 'Ordering & Payments', module: 'contact' },
+                    { id: 3, title: 'Refunds & Returns', module: 'contact' },
+                    { id: 4, title: 'Report a Bug', module: 'gh_issues' },
+                    { id: 5, title: 'Request a Feature', module: 'gh_issues' },
+                    { id: 6, title: 'Something Else', module: 'contact' }
+                ],
+                selectTopic(id, module) {
+                    if(this.module == module && this.topicId == id) {
+                        this.module = null;
+                        this.topicId = null;
+                        return;
+                    }
 
-            <div id="releases" class="flex flex-col gap-4">
-                <div
-    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 transition" id="release-latest"
+                    this.module = module;
+                    this.topicId = id;
+                    document.getElementById('module-anchor').scrollIntoView({ behavior: 'smooth' })
+                }
+            }">
+                
+                <section class="flex flex-col gap-4">
+                    <h2 class="text-xl font-bold" id="module-anchor">How can we help you?</h2>
+
+                    <div class="grid grid-cols-2 gap-4 text-center select-none">
+                        <template x-for="topic in topics">
+                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 cursor-pointer hover:bg-gray-50" @click="selectTopic(topic.id, topic.module)"
 >
-    <div class="flex gap-2">
-                        <h1 class="text-xl flex-1 flex items-center">
-                            SnapDB for macOS
-
-                            <span class="border text-sm mx-2 py-1 px-2 rounded-full text-green-600 border-green-600">
-    Latest
-</span>
-                        </h1>
-                        <div>
-                            <button class="relative cursor-pointer items-center font-medium justify-center gap-2 whitespace-nowrap group disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none h-10 text-sm rounded-lg px-4 inline-flex shadow-sm bg-snapdb-900 hover:bg-snapdb-500 text-gray-700" x-data="" @click="window.location = 'https://github.com/SnapDBApp/app/releases/latest/download/SnapDB.zip'">
-    Download
-</button>
-                        </div>
+    <span :class="{
+                                    'text-orange-500': topicId == topic.id,
+                                    'text-gray-500': topicId != topic.id
+                                }" x-text="topic.title"></span>
+</div>
+                        </template>
                     </div>
+                </section>
 
-                    <div class="markdown-body my-4"><p><span class="text-gray-500">The latest and greatest version of SnapDB for macOS. Find the full and latest release notes on GitHub.</span></p>
-</div>
+                
+                <div class="h-[100px] w-1 my-2 border-l-4 border-dotted mx-auto block"
+                     x-show="module !== null" x-transition.opacity
+                ></div>
 
-                    <span class="text-gray-400">recently updated</span>
+                
+                <section x-show="module == 'contact'" x-transition.opacity class="flex flex-col gap-4 mb-4">
+                    <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4"
+>
+    <h2 class="text-xl text-gray-500">Get in touch with us</h2>
+
+                        <form action="https://formsubmit.co/info@snapdb.app" method="POST" class="my-4">
+                            <input type="hidden" name="_token" value="vLek9ZXgkNUEsHg48yDjfV0qdt2eLvXlCIespXkH" autocomplete="off">
+                            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                                <div>
+                                    <label class="block text-sm/6 font-medium text-gray-900" for="name">
+    Name
+            <span class="text-red-500">*</span>
+    </label>
+                                    <input
+    type="text" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-snapdb-900 sm:text-sm/6" name="name" id="name" required="required" placeholder="John Doe"
+>
+                                </div>
+                                <div>
+                                    <label class="block text-sm/6 font-medium text-gray-900" for="company">
+    Company
+    </label>
+                                    <input
+    type="text" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-snapdb-900 sm:text-sm/6" name="company" id="company" placeholder="Acme"
+>
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label class="block text-sm/6 font-medium text-gray-900" for="email">
+    Email
+            <span class="text-red-500">*</span>
+    </label>
+                                    <input
+    type="email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-snapdb-900 sm:text-sm/6" name="email" id="email" required="required" placeholder="john.doe@example.com"
+>
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label class="block text-sm/6 font-medium text-gray-900" for="message">
+    Message
+            <span class="text-red-500">*</span>
+    </label>
+                                    <textarea
+    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-snapdb-900 sm:text-sm/6" maxlength="1000" name="message" rows="4" id="message" required="required"
+></textarea>
+                                </div>
+                                <div class="sm:col-span-2 flex gap-2">
+                                    <div><input
+    
+    type="checkbox" class="bg-white p-2 border-gray-300 focus:border-orange-500 focus:ring-orange-500 rounded-md shadow-sm" id="agree_privacy" name="agree_privacy" required="required"
+>
 </div>
+                                    <label class="block text-sm/6 font-medium text-gray-900 flex-1" for="agree_privacy">
+    I agree to the <a href="https://snapdb.app/privacy" target="_blank" class="link">Privacy Policy</a>
+            <span class="text-red-500">*</span>
+    </label>
+                                </div>
+                            </div>
+                            <div class="mt-10">
+                                <button class="relative cursor-pointer items-center font-medium justify-center gap-2 whitespace-nowrap group disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none h-10 text-sm rounded-lg px-4 inline-flex shadow-sm bg-snapdb-900 hover:bg-snapdb-500 text-gray-700 w-full" type="submit">
+    Send
+</button>
+                            </div>
+                        </form>
+</div>
+                </section>
+
+                
+                <section x-show="module == 'gh_issues'" x-transition.opacity class="flex flex-col gap-4 mb-4">
+                    <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4"
+>
+    <h2 class="text-xl text-gray-500">Please use our request tracker</h2>
+
+                        <div class="my-4 flex gap-2">
+                            <div class="px-4">
+                                <svg class="text-gray-500 size-12"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>                            </div>
+                            <div class="flex-1">
+                                <p>
+                                    We use GitHub to track feature and bug requests. Please use the link below to report a bug or request a feature.
+                                    Use the GitHub issue tracker to raise a new issue or to add to an existing issue.
+                                </p>
+
+                                <a class="relative cursor-pointer items-center font-medium justify-center gap-2 whitespace-nowrap group disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none h-10 text-sm rounded-lg px-4 inline-flex shadow-sm bg-white hover:bg-zinc-50 text-gray-500 border border-zinc-200 hover:border-zinc-200 border-b-zinc-300/80 mt-4" href="https://github.com/SnapDBApp/issues" target="_blank">
+    Open GitHub
+                                    <svg class="size-4 inline"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+  <path d="M11 13l9 -9" />
+  <path d="M15 4h5v5" />
+</svg>
+</a>
+                            </div>
+                        </div>
+</div>
+                </section>
+
+                
+                <section x-show="module == 'no_license'" x-transition.opacity class="flex flex-col gap-4 mb-4">
+                    <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4"
+>
+    <h2 class="text-xl text-gray-500">Did you not receive your license after purchase?</h2>
+
+                        <div class="my-4 flex gap-2">
+                            <div class="px-4">
+                                <svg class="text-gray-500 size-12"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-mail-x"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M13.5 19h-8.5a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v6" />
+  <path d="M3 7l9 6l9 -6" />
+  <path d="M22 22l-5 -5" />
+  <path d="M17 22l5 -5" />
+</svg>                            </div>
+                            <div class="flex-1">
+                                <p>
+                                    If you did not receive your license after purchase, please check your spam folder first.
+                                    <strong>Most customers still find their license key in their spam inbox.</strong>
+                                    If you still can't find it 30 minutes after purchase, please contact us and we will help resolve it.
+                                </p>
+                            </div>
+                        </div>
+</div>
+                </section>
             </div>
     </p>
 </article>

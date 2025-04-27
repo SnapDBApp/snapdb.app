@@ -5,10 +5,10 @@
     <meta http-equiv="Content-Language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Supported Databases • SnapDB • Dependency-free database management for productive (and lazy) people.</title>
+    <title>MariaDB • SnapDB • Dependency-free database management for productive (and lazy) people.</title>
     <meta name="description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
     <meta name="keywords" content="macOS database management, SnapDB app, dependency-free databases, Docker alternative, Homebrew-free DB management">
-    <link rel="canonical" href="https://snapdb.app/databases">
+    <link rel="canonical" href="https://snapdb.app/databases/mariadb">
 
     <meta property="og:title" content="SnapDB - The Best macOS Database Management App">
     <meta property="og:description" content="Dependency-free database management with SnapDB, the macOS app designed for seamless DB management and monitoring. Download now!">
@@ -37,7 +37,6 @@
 
     
     <link rel="preload" as="style" href="https://snapdb.app/build/assets/app-CjAlEvjy.css" /><link rel="modulepreload" href="https://snapdb.app/build/assets/app-Cy98PJ2n.js" /><link rel="stylesheet" href="https://snapdb.app/build/assets/app-CjAlEvjy.css" /><script type="module" src="https://snapdb.app/build/assets/app-Cy98PJ2n.js"></script>    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script type="text/javascript">
         Paddle.Initialize({
             token: 'live_d2e4212245ec1bc29127429a659'
@@ -193,46 +192,87 @@
         <div class="relative pt-14">
             <div class="py-24 sm:py-32 lg:pb-40">
                 <div class="bg-no-repeat bg-contain max-w-7xl mx-auto px-4 md:px-0">
-    <div class="grid grid-cols-1 md:grid-cols-2">
+    <nav class="flex mb-4" aria-label="Breadcrumb">
+                        <ol role="list" class="flex items-center space-x-4">
+                            <li>
+                                <div>
+                                    <a href="https://snapdb.app" class="text-gray-400 hover:text-gray-500">
+                                        <svg class="size-5 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                            <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="sr-only">Home</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <svg class="size-5 shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                        <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <a href="https://snapdb.app/databases" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">
+                                        Supported Databases
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <svg class="size-5 shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                        <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                    </svg>
+                                    <a href="https://snapdb.app/databases/mariadb" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page">
+                                        MariaDB
+                                    </a>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-10 my-20">
+                        <div class="flex items-center">
+                            <img src="https://snapdb.app/img/db/mariadb.png" alt="MariaDB logo" class="mx-auto size-40">
+                        </div>
                         <div class="flex items-center">
                             <div>
-                                <h1 class="font-bold text-2xl font-biggo">Databases supported by <span class="snapdb-underline underline-thick">SnapDB</span></h1>
+                                <h1 class="font-bold text-2xl font-biggo">Dependency-free <span class="snapdb-underline underline-thick">MariaDB</span> management with SnapDB</h1>
                                 <p class="text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-                                    SnapDB is the database management app that supports your favorite databases. Please refer to the list below for the databases and versions that are currently supported by SnapDB.
+                                    SnapDB allows you to manage your local MariaDB databases without the need for any additional dependencies. Our tool supports 12 MariaDB versions that you can use without Homebrew, Docker, Vagrant, or any other virtualization software on macOS.
+                                    <br /><br />
+                                    MariaDB Server is a general purpose open source relational database management system.
                                 </p>
                             </div>
                         </div>
-                        <div class="hidden md:flex items-center">
-                            <svg class="mx-auto size-40 mb-10 text-gray-200"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="icon icon-tabler icons-tabler-outline icon-tabler-database"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0" />
-  <path d="M4 6v6a8 3 0 0 0 16 0v-6" />
-  <path d="M4 12v6a8 3 0 0 0 16 0v-6" />
-</svg>                        </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-10">
-                                                    <a
-    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 hover:text-gray-900 hover:bg-gray-50 flex gap-4" href="https://snapdb.app/databases/mariadb"
+                    <div class="mt-20">
+                        <h1 class="font-bold text-2xl font-biggo">Supported <span class="snapdb-underline underline-thick">MariaDB</span> versions</h1>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
 >
-    <img src="https://snapdb.app/img/db/mariadb.png" alt="MariaDB logo" class="size-16">
-
-    <div>
-        <h4 class="font-semibold text-xl">MariaDB</h4>
-
-        <span class="inline-block rounded-md border px-1 text-xs">
-            <svg class="size-4 text-green-700 inline"
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>11.8.0 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -246,20 +286,36 @@
 >
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M5 12l5 5l10 -10" />
-</svg>            12 versions
-        </span>
-    </div>
-</a>
-                                                    <a
-    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 hover:text-gray-900 hover:bg-gray-50 flex gap-4" href="https://snapdb.app/databases/mysql"
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
 >
-    <img src="https://snapdb.app/img/db/mysql.png" alt="MySQL logo" class="size-16">
-
-    <div>
-        <h4 class="font-semibold text-xl">MySQL</h4>
-
-        <span class="inline-block rounded-md border px-1 text-xs">
-            <svg class="size-4 text-green-700 inline"
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>11.7.1 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -273,20 +329,36 @@
 >
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M5 12l5 5l10 -10" />
-</svg>            14 versions
-        </span>
-    </div>
-</a>
-                                                    <a
-    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 hover:text-gray-900 hover:bg-gray-50 flex gap-4" href="https://snapdb.app/databases/postgresql"
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
 >
-    <img src="https://snapdb.app/img/db/postgresql.png" alt="PostgreSQL logo" class="size-16">
-
-    <div>
-        <h4 class="font-semibold text-xl">PostgreSQL</h4>
-
-        <span class="inline-block rounded-md border px-1 text-xs">
-            <svg class="size-4 text-green-700 inline"
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>11.6.2 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -300,20 +372,36 @@
 >
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M5 12l5 5l10 -10" />
-</svg>            22 versions
-        </span>
-    </div>
-</a>
-                                                    <a
-    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 hover:text-gray-900 hover:bg-gray-50 flex gap-4" href="https://snapdb.app/databases/mongodb"
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
 >
-    <img src="https://snapdb.app/img/db/mongodb.png" alt="MongoDB logo" class="size-16">
-
-    <div>
-        <h4 class="font-semibold text-xl">MongoDB</h4>
-
-        <span class="inline-block rounded-md border px-1 text-xs">
-            <svg class="size-4 text-green-700 inline"
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>11.5.2 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -327,20 +415,36 @@
 >
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M5 12l5 5l10 -10" />
-</svg>            7 versions
-        </span>
-    </div>
-</a>
-                                                    <a
-    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 hover:text-gray-900 hover:bg-gray-50 flex gap-4" href="https://snapdb.app/databases/redis"
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
 >
-    <img src="https://snapdb.app/img/db/redis.png" alt="Redis logo" class="size-16">
-
-    <div>
-        <h4 class="font-semibold text-xl">Redis</h4>
-
-        <span class="inline-block rounded-md border px-1 text-xs">
-            <svg class="size-4 text-green-700 inline"
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>11.4.4 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -354,20 +458,36 @@
 >
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M5 12l5 5l10 -10" />
-</svg>            2 versions
-        </span>
-    </div>
-</a>
-                                                    <a
-    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 hover:text-gray-900 hover:bg-gray-50 flex gap-4" href="https://snapdb.app/databases/elasticsearch"
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
 >
-    <img src="https://snapdb.app/img/db/elasticsearch.png" alt="Elasticsearch logo" class="size-16">
-
-    <div>
-        <h4 class="font-semibold text-xl">Elasticsearch</h4>
-
-        <span class="inline-block rounded-md border px-1 text-xs">
-            <svg class="size-4 text-green-700 inline"
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>11.2.6 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -381,11 +501,270 @@
 >
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M5 12l5 5l10 -10" />
-</svg>            16 versions
-        </span>
-    </div>
-</a>
-                                            </div>
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
+>
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>11.1.6 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-check"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
+>
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>11.0.6 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-check"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
+>
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>10.11.10 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-check"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
+>
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>10.10.7 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-check"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
+>
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>10.9.8 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-check"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                            <div
+    class="text-sm/6 text-gray-700 bg-white shadow-md border rounded-lg p-4 flex gap-4"
+>
+    <svg class="size-10 text-gray-300"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-database-smile"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M10 14h.01" />
+  <path d="M14 14h.01" />
+  <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+  <path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" />
+  <path d="M4 6v12c0 1.657 3.582 3 8 3s8 -1.343 8 -3v-12" />
+</svg>
+                                    <div class="flex-1">
+                                        <p>
+                                            <h1>10.8.8 • macOS 14 (ARM, 64-bit)</h1>
+                                            <span><svg class="size-4 text-green-700 inline"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-check"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg> Supported</span>
+                                        </p>
+                                    </div>
+</div>
+                                                    </div>
+                    </div>
 
                     <div class="mt-16 flex justify-center">
     <p class="relative rounded-full bg-white hover:bg-gray-50 px-4 py-1.5 text-sm/6 text-gray-600 ring-1 ring-inset ring-gray-900/5">
